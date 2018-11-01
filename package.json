@@ -26,5 +26,8 @@
   "homepage": "https://github.com/bitex-la/bitex-guides#readme",
   "dependencies": {
     "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.15.0"
   }
 }
