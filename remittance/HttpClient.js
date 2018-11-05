@@ -1,88 +1,9 @@
 const https = require('https')
 const axios = require('axios')
 const MockAdapter = require('axios-mock-adapter')
+const getAccountTemplateData = require('../helpers/AccountTemplate')
 
 let mock = new MockAdapter(axios)
-
-function getAccountTemplateData(preFilledCurrency = '', amount = 0) {
-  let data = {
-    "data": [
-      {
-        "id": "8",
-        "type": "accounts",
-        "attributes": {
-          "balances": {
-            "btc": {
-              "total": 0,
-              "available": 0
-            },
-            "usd": {
-              "total": 0,
-              "available": 0
-            },
-            "ars": {
-              "total": 0,
-              "available": 0
-            },
-            "clp": {
-              "total": 0,
-              "available": 0
-            },
-            "bch": {
-              "total": 0,
-              "available": 0
-            },
-            "pyg": {
-              "total": 0,
-              "available": 0
-            },
-            "uyu": {
-              "total": 0,
-              "available": 0
-            }
-          },
-          "country": "AR"
-        },
-        "relationships": {
-            "movements": {
-                "data": []
-            },
-            "pending_movements": {
-                "data": []
-            },
-            "user": {
-                "data": {
-                    "id": "8",
-                    "type": "users"
-                }
-            }
-        }
-      }
-    ],
-    "included": [
-      {
-        "id": "8",
-        "type": "users",
-        "attributes": {
-          "name": "John Doe",
-          "email": "johndoe@gmail.com",
-          "kyc_accepted": true,
-          "otp_enabled": true,
-          "kyc_pending": false,
-          "do_not_email": false,
-          "trezor_login_enabled": false
-        }
-      }
-    ]
-  }
-  if (preFilledCurrency) {
-    data.data[0].attributes.balances[preFilledCurrency] = {
-      "total": amount,
-      "available": amount
-    }
-  }
-  return data
-}
 
 mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
   "data": [
@@ -195,7 +116,7 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
 })
 .onGet('https://bitex.la/api/accounts').replyOnce(200, getAccountTemplateData())
 .onGet('https://bitex.la/api/accounts').replyOnce(200, 
-  getAccountTemplateData("ars", 1000)
+  getAccountTemplateData({"ars": 1000})
 )
 .onGet('https://bitex.la/api/orderbooks').reply(200, {
   "data": [{
@@ -327,7 +248,7 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
   }
 })
 .onGet('https://bitex.la/api/accounts').replyOnce(200,
-  getAccountTemplateData("btc", 0.0012)
+  getAccountTemplateData({"btc": 0.0012})
 )
 .onPost('https://bitex.la/api/selling_bots').reply(200, {
   "data": {
@@ -414,7 +335,7 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
   }
 })
 .onGet('https://bitex.la/api/accounts').replyOnce(200, 
-  getAccountTemplateData("clp", 60000)
+  getAccountTemplateData({"clp": 60000})
 )
 .onPost('https://bitex.la/api/withdrawal_instructions').reply(200, {
   "data": {
