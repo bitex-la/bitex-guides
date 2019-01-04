@@ -11,7 +11,7 @@ function buildPaymentData(status = "pending") {
       "attributes": {
         "amount": 1000.0,
         "confirmed_quantity": 0.0,
-        "currency": "ars",
+        "currency_code": "ars",
         "customer_reference": "Purchase at My Store",
         "expected_quantity": 1000.0,
         "keep": 10.0,
@@ -55,9 +55,9 @@ function buildPaymentData(status = "pending") {
 }
 
 let mock = new MockAdapter(axios)
-.onPost('https://bitex.la/api/merchants/payments').reply(200, buildPaymentData())
-.onGet('https://bitex.la/api/merchants/payments/3').replyOnce(200,buildPaymentData())
-.onGet('https://bitex.la/api/merchants/payments/3').replyOnce(200,buildPaymentData("done"))
+.onPost('https://bitex.la/api/payments').reply(200, buildPaymentData())
+.onGet('https://bitex.la/api/payments/3').replyOnce(200,buildPaymentData())
+.onGet('https://bitex.la/api/payments/3').replyOnce(200,buildPaymentData("done"))
 .onGet('https://bitex.la/api/accounts').replyOnce(200, 
   getAccountTemplateData({"usd": 250, "btc": 0.004})
 )
@@ -94,7 +94,7 @@ let mock = new MockAdapter(axios)
       "amount": 60000.0,
       "country": "AR",
       "payment_method": "domestic_bank",
-      "currency": "CLP",
+      "fiat_code": "CLP",
       "label": "Local Bank",
       "created_at": "2018-06-06T17:05:19.024Z"
     },

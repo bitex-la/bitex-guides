@@ -107,12 +107,13 @@ mock.onGet('https://bitex.la/api/markets/btc_usd').reply(200, {
     }
   ]
 })
-.onPost('https://bitex.la/api/markets/btc_usd/bids').reply(200, {
+.onPost('https://bitex.la/api/bids').reply(200, {
   "data": {
     "id": "2",
     "type": "bids",
     "attributes": {
         "amount": 100000,
+        "orderbook_code": "btc_usd",
         "remaining_amount": 100000,
         "price": 13222.22,
         "status": "pending"
@@ -120,8 +121,8 @@ mock.onGet('https://bitex.la/api/markets/btc_usd').reply(200, {
   }
 })
 //To get a forever-pending bid, replace the following line with:
-// .onGet('https://bitex.la/api/markets/btc_usd/bids/2').reply(200, {
-.onGet('https://bitex.la/api/markets/btc_usd/bids/2').replyOnce(200, {
+// .onGet('https://bitex.la/api/bids/2').reply(200, {
+.onGet('https://bitex.la/api/bids/2').replyOnce(200, {
   "data": {
     "id": "2",
     "type": "bids",
@@ -134,19 +135,20 @@ mock.onGet('https://bitex.la/api/markets/btc_usd').reply(200, {
   }
 })
 // To get a forever-pending bid, comment out the next mock
-.onGet('https://bitex.la/api/markets/btc_usd/bids/2').replyOnce(200, {
+.onGet('https://bitex.la/api/bids/2').replyOnce(200, {
   "data": {
     "id": "2",
     "type": "bids",
     "attributes": {
         "amount": 100000,
+        "orderbook_code": "btc_usd",
         "remaining_amount": 100000,
         "price": 13222.22,
         "status": "done"
     }
   }
 })
-.onPost('https://bitex.la/api/markets/btc_usd/bids/cancel').reply(200)
+.onPost('https://bitex.la/api/bids/2/cancel').reply(200)
 .onAny().passThrough()
 
 let client = axios.create({

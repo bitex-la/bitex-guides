@@ -67,14 +67,15 @@ async function main() {
   //the actual buying.
 
   let bidCreationResponse = await client.post(
-    `${API_URL}/markets/btc_${CURRENCY}/bids`,
+    `${API_URL}/bids`,
     {
       "data": {
-          "type": "bids",
-          "attributes": {
-              "amount": AMOUNT,
-              "price": maxPrice
-          }
+        "type": "bids",
+        "attributes": {
+          "amount": AMOUNT,
+          "orderbook_code": `btc_${CURRENCY}`,
+          "price": maxPrice
+        }
       }
     },
     {
@@ -91,7 +92,7 @@ async function main() {
 
     console.log(`Checking status. Try number: ${retries}`)
     let response = await client.get(
-      `${API_URL}/markets/btc_${CURRENCY}/bids/${bidId}`, {
+      `${API_URL}/bids/${bidId}`, {
       headers: { 'Authorization': YOUR_API_KEY }
     })
     bidStatus = response.data.data.attributes.status
@@ -105,16 +106,7 @@ async function main() {
     console.log('Proceeding to cancel the bid')
 
     await client.post(
-      `${API_URL}/markets/btc_${CURRENCY}/bids/cancel`,
-      [
-        {
-          "data": {
-              "type": "bids",
-              "id": bidId
-          }
-        }
-      ],
-      {
+      `${API_URL}/bids/${bidId}/cancel`, {}, {
         headers: { 'Authorization': YOUR_API_KEY }
       }
     )

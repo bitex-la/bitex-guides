@@ -19,35 +19,14 @@ const AMOUNT = 10000
 const CURRENCY = 'ARS'
 const KEEP = 10 //Keep 10 percent in BTC
 
-/**
- * This map of currency <-> id is taken from the Create Payment endpoint
- * documentation
- */
-const currencies = {
-  'BTC': 1,
-  'USD': 3,
-  'ARS': 4,
-  'UYU': 5,
-  'EUR': 6,
-  'CLP': 7,
-  'PEN': 8,
-  'BRL': 9,
-  'COP': 10,
-  'MXN': 11,
-  'PYG': 12,
-  'CNY': 13,
-  'INR': 14,
-  'BCH': 16,
-}
-
 async function main() {
   console.log(`Creating a payment to receive ${AMOUNT} ${CURRENCY}`)
-  let response = await client.post(`${API_URL}/merchants/payments`, {
+  let response = await client.post(`${API_URL}/payments`, {
     "data": {
       "type": "payments",
       "attributes": {
         "amount": AMOUNT,
-        "currency": currencies[CURRENCY],
+        "currency_code": CURRENCY,
         "keep": KEEP,
         "callback_url": "https://mystore.com/webhook",
         "customer_reference": "Purchase at My Store",
@@ -70,7 +49,7 @@ async function main() {
 
     console.log('Checking payment status.')
     let response = await client.get(
-      `${API_URL}/merchants/payments/${paymentId}`, {
+      `${API_URL}/payments/${paymentId}`, {
       headers: { 'Authorization': YOUR_API_KEY }
     })
     paymentStatus = response.data.data.attributes.status
