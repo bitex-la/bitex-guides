@@ -169,6 +169,7 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
     "type": "buying_bots",
     "attributes": {
       "amount": 100.0,
+      "orderbook_code": "btc_usd",
       "remaining_amount": 100.0,
       "chunk_size": 5.0,
       "eta": "2018-06-12T19:53:38.935Z",
@@ -181,12 +182,6 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
           "id": "8",
           "type": "users"
         }
-      },
-      "orderbook": {
-        "data": {
-          "id": "1",
-          "type": "orderbooks"
-        }
       }
     }
   }
@@ -197,6 +192,7 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
     "type": "buying_bots",
     "attributes": {
       "amount": 100.0,
+      "orderbook_code": "btc_usd",
       "remaining_amount": 50.0,
       "chunk_size": 50.0,
       "eta": "2018-06-12T19:53:38.935Z",
@@ -209,12 +205,6 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
           "id": "8",
           "type": "users"
         }
-      },
-      "orderbook": {
-        "data": {
-          "id": "1",
-          "type": "orderbooks"
-        }
       }
     }
   }
@@ -225,6 +215,7 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
     "type": "buying_bots",
     "attributes": {
       "amount": 100.0,
+      "orderbook_code": "btc_usd",
       "remaining_amount": 0,
       "chunk_size": 50.0,
       "eta": "2018-06-12T19:53:38.935Z",
@@ -236,12 +227,6 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
         "data": {
           "id": "8",
           "type": "users"
-        }
-      },
-      "orderbook": {
-        "data": {
-          "id": "1",
-          "type": "orderbooks"
         }
       }
     }
@@ -256,6 +241,7 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
     "type": "selling_bots",
     "attributes": {
       "amount": 0.0012,
+      "orderbook_code": "btc_usd",
       "remaining_amount": 0.0012,
       "chunk_size": 0.0006,
       "eta": "2018-06-12T19:53:38.935Z",
@@ -268,12 +254,6 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
           "id": "8",
           "type": "users"
         }
-      },
-      "orderbook": {
-        "data": {
-          "id": "1",
-          "type": "orderbooks"
-        }
       }
     }
   }
@@ -284,6 +264,7 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
     "type": "selling_bots",
     "attributes": {
       "amount": 0.0012,
+      "orderbook_code": "btc_usd",
       "remaining_amount": 0.0006,
       "chunk_size": 0.0006,
       "eta": "2018-06-12T19:53:38.935Z",
@@ -296,12 +277,6 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
           "id": "8",
           "type": "users"
         }
-      },
-      "orderbook": {
-        "data": {
-          "id": "1",
-          "type": "orderbooks"
-        }
       }
     }
   }
@@ -312,6 +287,7 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
     "type": "selling_bots",
     "attributes": {
       "amount": 0.0012,
+      "orderbook_code": "btc_usd",
       "remaining_amount": 0,
       "chunk_size": 0.0006,
       "eta": "2018-06-12T19:53:38.935Z",
@@ -323,12 +299,6 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
         "data": {
           "id": "8",
           "type": "users"
-        }
-      },
-      "orderbook": {
-        "data": {
-          "id": "1",
-          "type": "orderbooks"
         }
       }
     }
@@ -370,7 +340,7 @@ mock.onGet('https://bitex.la/api/cash_deposit_instructions').reply(200, {
       "amount": 60000.0,
       "country": "AR",
       "payment_method": "domestic_bank",
-      "currency": "CLP",
+      "fiat_code": "CLP",
       "label": "Local Bank",
       "created_at": "2018-06-06T17:05:19.024Z"
     },

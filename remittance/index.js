@@ -77,15 +77,8 @@ async function main() {
       "data": {
         "type": "buying_bots",
         "attributes": {
-          "amount": balance
-        },
-        "relationships": {
-          "orderbook": {
-            "data": {
-              "id": IdOrderbookFrom,
-              "type": "orderbooks"
-            }
-          }
+          "amount": balance,
+          "orderbook_code": "btc_ars",
         }
       }
     },
@@ -121,15 +114,8 @@ async function main() {
       "data": {
         "type": "selling_bots",
         "attributes": {
-          "amount": btcBalance
-        },
-        "relationships": {
-          "orderbook": {
-            "data": {
-              "id": IdOrderbookTo,
-              "type": "orderbooks"
-            }
-          }
+          "amount": btcBalance,
+          "orderbook_code": "btc_clp",
         }
       }
     },
@@ -195,7 +181,7 @@ async function main() {
       "type": "cash_withdrawals",
       "attributes": {
         "amount": finalBalance,
-        "fiat": CURRENCY_TO
+        "fiat_code": CURRENCY_TO
       },
       "relationships": {
         "withdrawal_instruction": {
