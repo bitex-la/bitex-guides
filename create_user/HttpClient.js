@@ -90,9 +90,9 @@ mock.onPost('https://bitex.la/api/webhooks').reply(200, {
       "id": "1",
       "type": "attachments",
       "attributes": {
-        "document_file_name": "idfront.jpg",
+        "document_file_name": "DNI-tarjeta.jpg",
         "document_content_type": "image/jpeg",
-        "document_file_size": 8391,
+        "document_file_size": 52672,
         "created_at": "2018-10-23T17:32:55.000Z",
         "updated_at": "2018-10-23T17:32:55.000Z"
       },
@@ -140,9 +140,9 @@ mock.onPost('https://bitex.la/api/webhooks').reply(200, {
       "id": "2",
       "type": "attachments",
       "attributes": {
-        "document_file_name": "electricitybill.jpg",
+        "document_file_name": "factura.jpg",
         "document_content_type": "image/jpeg",
-        "document_file_size": 618,
+        "document_file_size": 85370,
         "created_at": "2018-10-23T17:32:55.000Z",
         "updated_at": "2018-10-23T17:32:55.000Z"
       },
@@ -234,9 +234,9 @@ mock.onPost('https://bitex.la/api/webhooks').reply(200, {
       "id": "1",
       "type": "attachments",
       "attributes": {
-        "document_file_name": "mysalaryreceipt.jpg",
+        "document_file_name": "recibo-de-sueldo.jpg",
         "document_content_type": "image/jpeg",
-        "document_file_size": 7463,
+        "document_file_size": 85423,
         "created_at": "2018-10-23T17:32:55.000Z",
         "updated_at": "2018-10-23T17:32:55.000Z"
       },

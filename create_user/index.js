@@ -1,10 +1,10 @@
 const client = require('./HttpClient')
-const sleep = require('await-sleep')
+const fs = require('fs')
 /**
  * In this example, we will create a new user, who will be under our own
  * management.
- * This goes under the Reseller program, so in order to get into that program,
- * you should contact us at comercial@bitex.la with your use case and
+ * This goes under the White Label program, so in order to get into that
+ * program, you should contact us at comercial@bitex.la with your use case and
  * requirements.
  * 
  * The user creation is done in several steps, to carefully analyse the data you
@@ -109,16 +109,16 @@ async function main() {
   console.log(`Identification created`)
 
   //STEP 4.1: Create an Identification Attachment
+  // The attachment must be sent base64 encoded.
   console.log(`Creating an attachment for the Identification`)
   let identificationAttachment = await client.post(`${API_URL}/attachments`, {
     "data": {
       "type": "attachments",
       "attributes": {
-        "document":
-          "ENCODED FILE IN BASE64. eg: data:image/jpeg;base64,/9j/4AAQSkZJR...",
-        "document_file_name": "idfront.jpg",
+        "document": fs.readFileSync('./images/DNI-tarjeta.jpg', 'base64'),
+        "document_file_name": "DNI-tarjeta.jpg",
         "document_content_type": "image/jpeg",
-        "document_file_size": 8391
+        "document_file_size": 52672
       },
       "relationships": {
         "attached_to_seed": {
@@ -162,16 +162,16 @@ async function main() {
   console.log(`Domicile created`)
 
   //STEP 5.1: Create a Domicile Attachment
+  // The attachment must be sent base64 encoded.
   console.log(`Creating an attachment for the Domicile`)
   let domicileAttachment = await client.post(`${API_URL}/attachments`, {
     "data": {
       "type": "attachments",
       "attributes": {
-        "document":
-          "ENCODED FILE IN BASE64. eg: data:image/jpeg;base64,/9j/4jsFL2ZJR...",
-        "document_file_name": "electricitybill.jpg",
+        "document": fs.readFileSync('./images/factura.jpg', 'base64'),
+        "document_file_name": "factura.jpg",
         "document_content_type": "image/jpeg",
-        "document_file_size": 618
+        "document_file_size": 85370
       },
       "relationships": {
         "attached_to_seed": {
@@ -261,16 +261,16 @@ async function main() {
   console.log(`Allowance Created`)
 
   //STEP 8.1: Create an Allowance Attachment
+  // The attachment must be sent base64 encoded.
   console.log(`Creating an attachment for the allowance`)
   let allowanceAttachment = await client.post(`${API_URL}/attachments`, {
     "data": {
       "type": "attachments",
       "attributes": {
-        "document":
-          "ENCODED FILE IN BASE64. eg: data:image/jpeg;base64,/9j/k8sF22ZeR...",
-        "document_file_name": "mysalaryreceipt.jpg",
+        "document": fs.readFileSync('./images/recibo-de-sueldo.jpg', 'base64'),
+        "document_file_name": "recibo-de-sueldo.jpg",
         "document_content_type": "image/jpeg",
-        "document_file_size": 7463
+        "document_file_size": 85423
       },
       "relationships": {
         "attached_to_seed": {
