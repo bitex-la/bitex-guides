@@ -1,4 +1,4 @@
 theme: jekyll-theme-hacker
-show_downloads: "false"
+show_downloads: nil
 title: "Bitex API Guides"
 description: "Don't Panic: The Bitex.la API user guides and tutorials"
