@@ -1,1 +1,0 @@
-No signup required!

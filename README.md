@@ -20,4 +20,6 @@ pull request to this repository are also welcome. We're always reachable at deve
   We tell you what's JSON-API, why we chose it, and what that means for you.
 - [Authentication and Authorization](/authentication):
   Learn what kind of API access you need, and how to get it.
+- [Remittances and mass disbursements](/concierge):
+  Learn to use our Concierge service.
 

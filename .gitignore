@@ -61,3 +61,4 @@ typings/
 .next
 *.swp
 *.swo
+_site/
