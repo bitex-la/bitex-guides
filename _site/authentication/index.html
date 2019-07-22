@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=7b5d817ae7464348886413d01a0d43e3fff63fcc">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Authentication and Authorization | Bitex API Guides</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Authentication and Authorization" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Don’t Panic: The Bitex.la API user guides and tutorials" />
+<meta property="og:description" content="Don’t Panic: The Bitex.la API user guides and tutorials" />
+<link rel="canonical" href="http://localhost:4000/authentication/" />
+<meta property="og:url" content="http://localhost:4000/authentication/" />
+<meta property="og:site_name" content="Bitex API Guides" />
+<script type="application/ld+json">
+{"description":"Don’t Panic: The Bitex.la API user guides and tutorials","@type":"WebPage","url":"http://localhost:4000/authentication/","headline":"Authentication and Authorization","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Bitex API Guides</h1>
+        <h2>Don't Panic: The Bitex.la API user guides and tutorials</h2>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="authentication-and-authorization">Authentication and Authorization</h1>
+
+<p><strong>We have 3 API access roles</strong> and want to help you figure out which one you need,
+how to get it, and how to use it. Those roles are General Public, Bitex User, and Bitex Whitelabeler.</p>
+
+<h2 id="role-1-general-public-no-signup-required">Role 1: General Public, no signup required!</h2>
+
+<p>Anyone can read the market data, transaction history,
+reference exchange rates, and other data services. Go ahead, try the tickers endpoint right away:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl https://bitex.la/api/tickers
+</code></pre></div></div>
+
+<p>See more public endpoints in the <a href="https://developers.bitex.la/#d7e259a6-b126-4d4c-ae66-b456242d33a6">Market Data</a>
+API reference.</p>
+
+<h2 id="role-2-bitex-users">Role 2: Bitex Users</h2>
+
+<p>People who have signed up for a Bitex account can manage
+their own API keys and access all endpoints related to their balances,
+deposits and withdrawals.
+They can also trade in the exchange and process
+incoming bitcoin payments to their account.</p>
+
+<p>You can get this type of access by signing up for a Bitex user account,
+start in our sandbox and then do the same for our production environment.</p>
+
+<p>We suggest you take look at our <a href="/sandbox">Sandbox Guide</a>.</p>
+
+<h3 id="first-step-sign-up-in-for-a-bitex-account">First step: Sign up in for a Bitex account.</h3>
+
+<p>For sandbox it’s <a href="https://sandbox.bitex.la/auth/sign-up">https://sandbox.bitex.la/auth/sign-up</a>.</p>
+
+<p>For production it’s <a href="https://bitex.la/auth/sign-up">https://bitex.la/auth/sign-up</a>.</p>
+
+<h3 id="second-step-fill-in-your-details-and-wait-for-your-account-to-be-approved">Second step: Fill in your details and wait for your account to be approved.</h3>
+
+<p>To get a <strong>sandbox account</strong> you can submit bogus data, to get it approved
+send an email to <a href="mailto:developers@bitex.la">developers@bitex.la</a> and tell us which email you signed up with.</p>
+
+<p>For <strong>production</strong> you should wait for our team to approve your account,
+it takes about a day for us to get back to you.</p>
+
+<h3 id="third-step-create-your-api-key">Third step: Create your API key</h3>
+
+<p>Either in <a href="https://sandbox.bitex.la/apikeys">sandbox</a> or in 
+<a href="https://bitex.la/apikeys">production</a>.
+Pay special attention to the available permissions.</p>
+
+<p>We use modern TLS for our API endpoints so that you don’t need to encrypt messages and prevent reply attacks
+at the application level.</p>
+
+<p>Just focus on keeping your API key safe from the moment it’s created.
+Revoke your keys as soon as possible if you believe they have been compromised.</p>
+
+<p>We can also offer mutual SSL upon your request, but it may have an associated setup fee.</p>
+
+<h3 id="finally-try-out-your-api-key">Finally: Try out your API key.</h3>
+
+<p>To use your API just send it in an <code class="highlighter-rouge">Authorization:</code> header as required.</p>
+
+<p>For example, this is how you would list your <a href="https://developers.bitex.la/#fa6a0343-880b-4944-83ae-9a8e7367e3df">crypto coin balances</a>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl --location --request GET "https://sandbox.bitex.la/api/coin_wallets" \
+  --header "Content-Type: application/json" \
+  --header "Authorization: your_api_key" \
+  --header "Version: 2.1"
+</code></pre></div></div>
+
+<p>Check the <a href="https://developers.bitex.la/">API Reference</a> to learn about
+all the things you can do with your Bitex User access.</p>
+
+<p><strong>Pro Tip:</strong> Keep your sandbox access at hand even after you move to production.</p>
+
+<h2 id="role-3-bitex-whitelabelers">Role 3: Bitex Whitelabelers</h2>
+<p>You can request whitelabeler access if you need to create and manage multiple Bitex accounts.</p>
+
+<p>With this role, you would be able to create new users, and act on their behalf.</p>
+
+<p>Whitelabeler access is required, for example, if you
+want to use our concierge service for cross border remittances and mass disbursements.</p>
+
+<p>Whitelabeler access is not self-serviced (but there’s no extra cost associated with it).
+<a href="mailto:comercial@bitex.la">Contact our sales team</a> and tell us more about your use case.</p>
+
+<h3 id="first-step-get-bitex-user-access">First Step: Get Bitex User access.</h3>
+
+<p>Go through all the steps for creating an API key. See <a href="Role2">Role 2: Bitex User</a>.</p>
+
+<h3 id="second-step-request-whitelabeler-status">Second Step: Request Whitelabeler status</h3>
+
+<p>Once you have your API key, contact us so that we can bless it with Whitelabeler access.</p>
+
+<p>For <strong>sandbox</strong>, just drop us a line to <a href="mailto:developers@bitex.la">developers@bitex.la</a>.</p>
+
+<p>For <strong>production</strong>, we’ll grant Whitelabeler access once we’ve validated your sandbox integration.</p>
+
+<h3 id="finally-try-out-your-whitelabeler-api-access">Finally: Try out your Whitelabeler API access.</h3>
+
+<p>To use your API key for managing users, just send it in an <code class="highlighter-rouge">Authorization:</code> header as required.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl --location --request POST "https://sandbox.bitex.la/api/users" \
+  --header "Content-Type: application/json" \
+  --header "Authorization: whitelabel_api_key" \
+  --header "Version: 2.1" \
+  --data "{
+    \"data\": {
+        \"type\": \"users\",
+        \"attributes\": {
+            \"email\": \"test@whitelabeler.com\",
+            \"password\": \"password\"
+        }
+    }
+}"
+</code></pre></div></div>
+
+<p>See the <a href="https://developers.bitex.la/?version=latest#86c5d36b-3f74-499f-817e-38f9a3d789ce">Users API Reference</a>
+for more endpoints available exclusively to Whitelabelers.</p>
+
+<p>You can also act on behalf of any of the users you have created. You can use any endpoint available
+to Bitex User’s, as long as you specify that user’s ID in your authorization header.</p>
+
+<p>For example, this is how you would list a user’s crypto balances.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl --location --request GET "https://sandbox.bitex.la/api/coin_wallets" \
+  --header "Content-Type: application/json" \
+  --header "Authorization: jruFCnab2539vwj2s684nsga82nda; user=123"
+</code></pre></div></div>
+
+<p>Don’t forget to check the <a href="https://developers.bitex.la/">API Reference</a> to learn about
+all the things you can do with your Bitex Whitelabeler access.</p>
+
+<p><br /></p>
+<hr />
+
+<p><a href="/">Back to Guides index</a></p>
+
+      </section>
+    </div>
+  </body>
+</html>
