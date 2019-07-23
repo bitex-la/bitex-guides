@@ -4,10 +4,10 @@ The Concierge API lets you send money from one port to several ports.
 
 ## Index
 
-- [Requirements](/concierge/requirements):
-  These are the first steps you must take to be able to use our Concierge service.
+- [Pre-Requisites](/concierge/pre_requisites):
+  What you need to do before you can start using the Concierge API.
 - [Create a Concierge Request](/concierge/request):
-  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+  Tell us about the payments you need to do.
 - [Request a Quote](/concierge/request_quote):
   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
 - [Wait for your quote to be ready at the estimated time](/concierge/wait):
@@ -18,7 +18,7 @@ The Concierge API lets you send money from one port to several ports.
   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
 - [Cancelling a request](/concierge/cancelling):
   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
-- [Creating new people](/concierge/people):
+- [Creating new people](/concierge/create_user):
   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
 
 <br/>

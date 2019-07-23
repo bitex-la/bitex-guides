@@ -1,0 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.footer-nav {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px dashed #b5e853;
+
+  .forth{
+    float: right;
+  }
+}
