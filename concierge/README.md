@@ -9,17 +9,23 @@ The Concierge API lets you send money from one port to several ports.
 - [Create a Concierge Request](/concierge/request):
   Tell us about the payments you need to do.
 - [Get a Quote](/concierge/get_quote):
-  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+  Ask us for quoting your Request.
 - [Wait for your quote to be ready at the estimated time](/concierge/wait):
-  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+  We will be quoting your Request.
 - [Follow the money as payments are made](/concierge/follow):
-  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+  Money begins to arrive to your Recipients.
 - [Once it's done, it's done](/concierge/once):
-  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
-- [Cancelling a request](/concierge/cancelling):
-  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
-- [Creating new people](/concierge/create_user):
-  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+  Relax.
+
+## Appendices
+
+- [Creating a new User](/concierge/create_user):
+  How to create a new User.
+- [Callbacks](/concierge/callbacks):
+  How you will be notified.
+- [Cancelling a Request](/concierge/cancelling):
+  If you don't need the Request anymore.
+
 
 <br/>
 <hr/>
