@@ -1,9 +1,9 @@
-# Requesting a Quote
+# Get a quote
 
 Once you're done indicating all the outputs, request a quote from us.
 
 ```
-curl --location --request POST "https://sandbox.bitex.la/api/concierge_requests/6/request_quote" \
+curl -X POST "https://sandbox.bitex.la/api/concierge_requests/6/request_quote" \
   --header "Authorization: your_api_key"
 ```
 
@@ -11,6 +11,22 @@ Your quote may or may not be produced automatically, so you will get an ETA. (In
 The ETA is a short period of time, in general around 20 minutes, but could be done immedately in some cases.
 
 At this point, you will have until `cancellable_until` to [Cancel](/concierge/cancelling) the order, if you did not, the order will be accepted automatically and the payment process will start.
+
+Learn more about how to request a quote in the
+[API Reference](https://developers.bitex.la/#9f8d8570-db6b-4f1f-8d0c-8cb440bf7f5c).
+
+<div class="footer-nav">
+  <span>
+    Back:
+    <a href="/concierge/request">Create a Concierge Request</a>
+  </span>
+  <span class="forth">
+      Next: 
+      <a href="/concierge/wait">Wait for your quote</a>
+  </span>
+</div>
+
+
 
 
 
@@ -52,12 +68,3 @@ At this point, you will have until `cancellable_until` to [Cancel](/concierge/ca
     }
 }
 ```
-
-<br/>
-<hr/>
-<p style="text-align:left;">
-    <a href="/concierge/request">Request</a>
-    <span style="float:right;">
-        <a href="/concierge/wait">Wait for quotation</a>
-    </span>
-</p>
