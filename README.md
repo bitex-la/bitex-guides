@@ -20,6 +20,16 @@ pull request to this repository are also welcome. We're always reachable at deve
   We tell you what's JSON-API, why we chose it, and what that means for you.
 - [Authentication and Authorization](/authentication):
   Learn what kind of API access you need, and how to get it.
-- [Remittances and mass disbursements](/concierge):
+- [Market Watch](/market_watch):
+  xxxxxxxxx.
+- [Trading and Arbitrage](/trading_arbitrage):
+  xxxxxxxxx.
+- [Accept Bitcoin Payments](/accept_bitcoin_payments):
+  xxxxxxxxx.
+- [Remittances????](/remittances):
+  xxxxxxxxx.
+- [Asset Management](/asset_management):
+  xxxxxxxxx.
+- [Remittances and mass disbursements (ALPHA)](/concierge):
   Learn to use our Concierge service.
 
