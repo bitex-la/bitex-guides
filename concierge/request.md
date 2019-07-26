@@ -39,6 +39,15 @@ curl -X POST "https://sandbox.bitex.la/api/concierge_requests" \
 Learn more about creating, listing and showing `Concierge Requests` in the
 [API Reference](https://developers.bitex.la/#a65c3a0d-f2d6-4d95-b7cd-f991c5f3480b).
 
+These are the possible `Request` states: 
+
+  - `draft`:  Initial state, you can continue modifying it.
+  - `quote_requested`:  You have already requested the quote.
+  - `quoted`: We already quote.
+  - `working`: We are working to make payments.
+  - `finished`: We have finished paying.
+  - `cancelled`: You have canceled the `Request`.
+
 ### Where are you sending to?
 
 For each recipient you will have to tell us `who` gets paid,
@@ -92,9 +101,9 @@ curl -X POST "https://bitex.la/api/concierge_request_outputs" \
 
 Each of the created `Outputs` has its own `state` which can be:
 
-  - `accepting`: Waiting for our Compliance department resolution.
-  - `accepted`:  All validations completed.
-  - `rejected`:  Our Compliance validations did not pass.
+  - `accepting`: Waiting for our acceptance checks.
+  - `accepted`:  All the checks are OK.
+  - `rejected`:  Our acceptance checks didn't pass.
   - `working`:   We are trying to send the money to the target port.
   - `cancelled`: This payment was cancelled while working on it.
   - `settled`:   The payment was settled.
@@ -102,6 +111,10 @@ Each of the created `Outputs` has its own `state` which can be:
 
 Learn more about creating, listing and showing `Concierge Requests Outputs` in the
 [API Reference](https://developers.bitex.la/#d70e6467-f6b2-41d9-8391-9b9865806442).
+
+
+********* TODO
+********* acceptance checks
 
 <div class="footer-nav">
   <span>
