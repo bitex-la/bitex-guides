@@ -15,7 +15,7 @@ Now, you have to track the state of each output. The output states could be:
 
 ```
 curl "https://sandbox.bitex.la/api/concierge_request_outputs?filter[request_id]=6" \
-  --header "Authorization: your_api_key" \
+  --header "Authorization: your_api_key"
 ```
 
 <div class="footer-nav">

@@ -10,7 +10,7 @@ curl "https://sandbox.bitex.la/api/concierge_requests/6" \
   --header "Authorization: your_api_key"
 ```
 
-At this point, you will have approximately 15 minutes to [Cancel](/concierge/cancelling) the order, if you did not, the order will be accepted automatically and the payment process will start.
+At this point, you will have a brief window of time to [Cancel](/concierge/cancelling) the `Request`, if you did not, the quote will be considered accepted and the payment process will start.
 
 <div class="footer-nav">
   <span>
