@@ -10,7 +10,7 @@ curl -X POST "https://sandbox.bitex.la/api/concierge_requests/6/request_quote" \
 Your quote may or may not be produced automatically, so you will get an ETA. (In some rare cases you may have to wait for your quote on business hours.). 
 The ETA is a short period of time, in general around 20 minutes, but could be done immedately in some cases.
 
-At this point, you will have until `cancellable_until` to [Cancel](/concierge/cancelling) the order, if you did not, the order will be accepted automatically and the payment process will start.
+At this point, you will have until `cancellable_until` to [Cancel](/bitex-guides/concierge/cancelling) the order, if you did not, the order will be accepted automatically and the payment process will start.
 
 Learn more about how to request a quote in the
 [API Reference](https://developers.bitex.la/#9f8d8570-db6b-4f1f-8d0c-8cb440bf7f5c).

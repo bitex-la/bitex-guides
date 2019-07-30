@@ -57,7 +57,7 @@ You do this by creating `Outputs`, and setting:
 
 - **User:** `Who` gets paid, this can be a user you have already paid to, or someone
 new you've never paid before.
-Read more about [setting up a new recipient](/concierge/create_user).
+Read more about [setting up a new recipient](/bitex-guides/concierge/create_user).
 
 - **Port:** `Where` are they getting paid. You can mix destination `Ports` in the same 
 `Concierge Request`.

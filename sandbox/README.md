@@ -5,7 +5,7 @@ We have a Sandbox environment at [https://sandbox.bitex.la](https://sandbox.bite
 You should always start your API integration in the Sandbox before moving to Production.
 
 Sandbox and Production behave very similar, but share no data. You'll have to sign up
-to each one of them separately. Learn more in the [Authentication Guide](/authentication)
+to each one of them separately. Learn more in the [Authentication Guide](/bitex-guides/authentication)
 
 The Sandbox uses the BTC and BCH testnets, so you can deposit testnet coins from a
 [Bitcoin Testnet Faucet](https://coinfaucet.eu/en/btc-testnet/) or a 
@@ -23,4 +23,4 @@ for any administrative task in the Sandbox, such as:
 
 <br/>
 <hr/>
-[Back to Guides index](/)
+[Back to Guides index](/bitex-guides/)

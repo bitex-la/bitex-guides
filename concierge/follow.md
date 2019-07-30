@@ -1,7 +1,7 @@
 
 # Follow the money as payments are made
 
-At this point the `Request` will be in a `working` state and, as usual, you will be notified with a [Callback](/concierge/callback).
+At this point the `Request` will be in a `working` state and, as usual, you will be notified with a [Callback](/bitex-guides/concierge/callback).
 
 Now, you have to track the state of each output. The output states could be:
 
@@ -11,7 +11,7 @@ Now, you have to track the state of each output. The output states could be:
   - `settled`:   The payment was settled.
   - `returned`:  Some external agent could not process the payment.
 
-[Callbacks](/concierge/callback) will be triggered as soon as each payment progresses, and of course, you could query the output state manually:
+[Callbacks](/bitex-guides/concierge/callback) will be triggered as soon as each payment progresses, and of course, you could query the output state manually:
 
 ```
 curl "https://sandbox.bitex.la/api/concierge_request_outputs?filter[request_id]=6" \

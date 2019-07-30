@@ -1,6 +1,6 @@
 # Once it's done, it's done.
 
-You'll get a `Request` finalization [Callback](/concierge/callback).
+You'll get a `Request` finalization [Callback](/bitex-guides/concierge/callback).
 
 Thank you for flying [Bitex.la](https://bitex.la/)!
 
