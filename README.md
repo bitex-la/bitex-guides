@@ -21,15 +21,13 @@ pull request to this repository are also welcome. We're always reachable at deve
 - [Authentication and Authorization](/authentication):
   Learn what kind of API access you need, and how to get it.
 - [Market Watch](/market_watch):
-  xxxxxxxxx.
+  Our market data is free. You can use it and re-distribute it.
 - [Trading and Arbitrage](/trading_arbitrage):
-  xxxxxxxxx.
+  Buy, sell, deposit, withdraw. All via API.
 - [Accept Bitcoin Payments](/accept_bitcoin_payments):
-  xxxxxxxxx.
-- [Remittances????](/remittances):
-  xxxxxxxxx.
+  Quote prices in fiat, get paid in bitcoin, and settle to fiat.
 - [Asset Management](/asset_management):
-  xxxxxxxxx.
+  For investment funds or wealth managers buying Bitcoin.
 - [Remittances and mass disbursements (ALPHA)](/concierge):
   Learn to use our Concierge service.
 
