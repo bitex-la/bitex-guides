@@ -82,6 +82,12 @@ curl -X POST "https://sandbox.bitex.la/api/concierge_request_outputs" \
             \"amount\": 1000
         },
         \"relationships\": {
+            \"request\": {
+                \"data\": {
+                    \"id\": 1,
+                    \"type\": \"concierge_requests\"
+                }
+            },
             \"withdrawal_instruction\": {
                 \"data\": {
                     \"id\": 1,
