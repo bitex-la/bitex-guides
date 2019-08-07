@@ -102,7 +102,7 @@ For **production**, we'll grant Whitelabeler access once we've validated your sa
 To use your API key for managing users, just send it in an `Authorization:` header as required.
 
 ```
-curl --location --request POST "https://sandbox.bitex.la/api/users" \
+curl -X POST "https://sandbox.bitex.la/api/users" \
   --header "Content-Type: application/json" \
   --header "Authorization: whitelabel_api_key" \
   --header "Version: 2.1" \
