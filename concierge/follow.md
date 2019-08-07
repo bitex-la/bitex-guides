@@ -21,9 +21,9 @@ curl "https://sandbox.bitex.la/api/concierge_request_outputs?filter[request_id]=
 <div class="footer-nav">
   <span>
     Back:
-    <a href="/concierge/wait">Wait for your quote</a>
+    <a href="/bitex-guides/concierge/wait">Wait for your quote</a>
   </span>
   <span class="forth">
-      Next: <a href="/concierge/once">Once it’s done, it’s done.</a>
+      Next: <a href="/bitex-guides/concierge/once">Once it’s done, it’s done.</a>
   </span>
 </div>

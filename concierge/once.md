@@ -7,6 +7,6 @@ Thank you for flying [Bitex.la](https://sandbox.bitex.la/)!
 <div class="footer-nav">
   <span>
     Back:
-    <a href="/concierge/follow">Follow the money</a>
+    <a href="/bitex-guides/concierge/follow">Follow the money</a>
   </span>
 </div>

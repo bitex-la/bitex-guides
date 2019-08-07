@@ -15,10 +15,10 @@ At this point, you will have a brief window of time to [Cancel](/bitex-guides/co
 <div class="footer-nav">
   <span>
     Back:
-    <a href="/concierge/get_quote">Get a quote</a>
+    <a href="/bitex-guides/concierge/get_quote">Get a quote</a>
   </span>
   <span class="forth">
       Next: 
-      <a href="/concierge/follow">Follow the money</a>
+      <a href="/bitex-guides/concierge/follow">Follow the money</a>
   </span>
 </div>

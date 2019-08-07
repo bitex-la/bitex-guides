@@ -18,10 +18,10 @@ Learn more about how to request a quote in the
 <div class="footer-nav">
   <span>
     Back:
-    <a href="/concierge/request">Create a Concierge Request</a>
+    <a href="/bitex-guides/concierge/request">Create a Concierge Request</a>
   </span>
   <span class="forth">
       Next: 
-      <a href="/concierge/wait">Wait for your quote</a>
+      <a href="/bitex-guides/concierge/wait">Wait for your quote</a>
   </span>
 </div>

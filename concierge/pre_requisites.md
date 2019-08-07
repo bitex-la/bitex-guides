@@ -10,9 +10,9 @@ you can contact a sales representative at [comercial@bitex.la](mailto:comercial@
 <div class="footer-nav">
   <span>
     Back:
-    <a href="/concierge/">Concierge Index</a>
+    <a href="/bitex-guides/concierge/">Concierge Index</a>
   </span>
   <span class="forth">
-      Next: <a href="/concierge/request">Create a Concierge Request</a>
+      Next: <a href="/bitex-guides/concierge/request">Create a Concierge Request</a>
   </span>
 </div>

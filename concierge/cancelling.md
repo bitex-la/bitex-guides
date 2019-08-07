@@ -16,6 +16,6 @@ Learn more about how to cancel a `Request` in the
 <div class="footer-nav">
   <span>
     Back:
-    <a href="/concierge/">Concierge Index</a>
+    <a href="/bitex-guides/concierge/">Concierge Index</a>
   </span>
 </div>

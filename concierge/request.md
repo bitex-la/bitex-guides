@@ -125,10 +125,10 @@ Learn more about creating, listing and showing `Concierge Requests Outputs` in t
 <div class="footer-nav">
   <span>
     Back:
-    <a href="/concierge/pre_requisites/">Pre-Requisites</a>
+    <a href="/bitex-guides/concierge/pre_requisites/">Pre-Requisites</a>
   </span>
   <span class="forth">
-      Next: <a href="/concierge/get_quote">Get a quote</a>
+      Next: <a href="/bitex-guides/concierge/get_quote">Get a quote</a>
   </span>
 </div>
 
