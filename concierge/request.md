@@ -71,7 +71,7 @@ create `new ones`. Learn more in the
 [Withdrawal Instructions API reference](https://developers.bitex.la#6f243946-38a1-4906-9fe3-8d5fa8546dd5).
 
 ```
-curl -X POST "https://bitex.la/api/concierge_request_outputs" \
+curl -X POST "https://sandbox.bitex.la/api/concierge_request_outputs" \
   --header "Content-Type: application/json" \
   --header "Authorization: your_api_key" \
   --data "{

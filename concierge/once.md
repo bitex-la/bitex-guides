@@ -2,7 +2,7 @@
 
 You'll get a `Request` finalization [Callback](/bitex-guides/concierge/callback).
 
-Thank you for flying [Bitex.la](https://bitex.la/)!
+Thank you for flying [Bitex.la](https://sandbox.bitex.la/)!
 
 <div class="footer-nav">
   <span>

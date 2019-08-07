@@ -4,7 +4,7 @@
 You need a user for every `Request Output`, you can create a new one this way: 
 
 ```
-curl -X POST "https://bitex.la/api/users" \
+curl -X POST "https://sandbox.bitex.la/api/users" \
   --header "Content-Type: application/json" \
   --header "Authorization: whitelabel_api_key" \
   --data "{

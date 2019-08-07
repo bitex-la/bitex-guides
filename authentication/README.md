@@ -9,7 +9,7 @@ Anyone can read the market data, transaction history,
 reference exchange rates, and other data services. Go ahead, try the tickers endpoint right away:
 
 ```
-curl https://bitex.la/api/tickers
+curl https://sandbox.bitex.la/api/tickers
 ```
 
 See more public endpoints in the [Market Data](https://developers.bitex.la/#d7e259a6-b126-4d4c-ae66-b456242d33a6)
@@ -32,7 +32,7 @@ We suggest you take look at our [Sandbox Guide](/bitex-guides/sandbox).
 
 For sandbox it's [https://sandbox.bitex.la/auth/sign-up](https://sandbox.bitex.la/auth/sign-up).
 
-For production it's [https://bitex.la/auth/sign-up](https://bitex.la/auth/sign-up).
+For production it's [https://sandbox.bitex.la/auth/sign-up](https://sandbox.bitex.la/auth/sign-up).
 
 ### Second step: Fill in your details and wait for your account to be approved.
 
@@ -45,7 +45,7 @@ it takes about a day for us to get back to you.
 ### Third step: Create your API key
 
 Either in [sandbox](https://sandbox.bitex.la/apikeys) or in 
-[production](https://bitex.la/apikeys).
+[production](https://sandbox.bitex.la/apikeys).
 Pay special attention to the available permissions.
 
 We use modern TLS for our API endpoints so that you don't need to encrypt messages and prevent reply attacks

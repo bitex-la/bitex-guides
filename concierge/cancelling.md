@@ -6,7 +6,7 @@ A `Request` can be cancelled when it is `draft`, `quote_requested` or `quoted`.
 To do it, how have to:
 
 ```
-curl -X POST "https://bitex.la/api/concierge_requests/6/cancel" \
+curl -X POST "https://sandbox.bitex.la/api/concierge_requests/6/cancel" \
   --header "Authorization: your_api_key"
 ```
 
