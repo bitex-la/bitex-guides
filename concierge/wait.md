@@ -1,7 +1,7 @@
 
 # Wait for your quote to be ready at the estimated time.
 
-Once we quote your `Request`, it will be in a `quoted` state and you will be notified with a [Callback](/bitex-guides/concierge/callback).
+Once we quote your `Request`, it will be in a `quoted` state and you will be notified with a [Callback](/bitex-guides/concierge/callbacks).
 
 You can also poll your `Request` to see its status and quote:
 

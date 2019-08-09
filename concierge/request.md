@@ -45,8 +45,8 @@ These are the possible `Request` states:
   - `quote_requested`:  You have already requested the quote.
   - `quoted`: We already quote.
   - `working`: We are working to make payments.
-  - `finished`: We have finished paying.
-  - `cancelled`: You have canceled the `Request`.
+  - **`finished`**: We have finished paying.
+  - **`cancelled`**: You have canceled the `Request`.
 
 ### Where are you sending to?
 
@@ -109,11 +109,11 @@ Each of the created `Outputs` has its own `state` which can be:
 
   - `accepting`: Waiting for our acceptance checks.
   - `accepted`:  All the checks are OK.
-  - `rejected`:  Our acceptance checks didn't pass.
+  - **`rejected`**:  Our acceptance checks didn't pass.
   - `working`:   We are trying to send the money to the target port.
-  - `cancelled`: This payment was cancelled while working on it.
-  - `settled`:   The payment was settled.
-  - `returned`:  Some external agent could not process the payment.
+  - **`cancelled`**: This payment was cancelled while working on it.
+  - **`settled`**:   The payment was settled.
+  - **`returned`**:  Some external agent could not process the payment.
 
 Learn more about creating, listing and showing `Concierge Requests Outputs` in the
 [API Reference](https://developers.bitex.la/#d70e6467-f6b2-41d9-8391-9b9865806442).
