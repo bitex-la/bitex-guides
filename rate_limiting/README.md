@@ -13,4 +13,4 @@ at [developers@bitex.la](mailto:developers@bitex.la) so we can evaluate your cas
 
 <br/>
 <hr/>
-[Back to Guides index](/bitex-guides/)
+[Back to Guides index](/)

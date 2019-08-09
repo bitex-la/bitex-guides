@@ -26,7 +26,7 @@ incoming bitcoin payments to their account.
 You can get this type of access by signing up for a Bitex user account,
 start in our sandbox and then do the same for our production environment.
 
-We suggest you take look at our [Sandbox Guide](/bitex-guides/sandbox).
+We suggest you take look at our [Sandbox Guide](/sandbox).
 
 ### First step: Sign up in for a Bitex account.
 
@@ -136,4 +136,4 @@ all the things you can do with your Bitex Whitelabeler access.
 
 <br/>
 <hr/>
-[Back to Guides index](/bitex-guides/)
+[Back to Guides index](/)
