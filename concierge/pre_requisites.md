@@ -1,7 +1,7 @@
 # Pre-Requisites
 
 Before you can start using the Concierge API for cross-border remittances you 
-will need a Bitex account with the [Whitelabeler Role](/bitex-guides/authentication#role-3-bitex-whitelabelers)
+will need a Bitex account with the [Whitelabeler Role](/authentication#role-3-bitex-whitelabelers)
 and funds in your Bitex balance.
 
 If you need more information about signing up and funding your Bitex account
@@ -10,9 +10,9 @@ you can contact a sales representative at [comercial@bitex.la](mailto:comercial@
 <div class="footer-nav">
   <span>
     Back:
-    <a href="/bitex-guides/concierge/">Concierge Index</a>
+    <a href="/concierge/">Concierge Index</a>
   </span>
   <span class="forth">
-      Next: <a href="/bitex-guides/concierge/request">Create a Concierge Request</a>
+      Next: <a href="/concierge/request">Create a Concierge Request</a>
   </span>
 </div>

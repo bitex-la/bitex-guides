@@ -6,4 +6,4 @@
 
 <br/>
 <hr/>
-[Back to Concierge index](/bitex-guides/concierge)     [Next step](/bitex-guides/concierge/pepe)
+[Back to Concierge index](/concierge)     [Next step](/concierge/pepe)

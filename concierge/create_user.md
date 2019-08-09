@@ -25,6 +25,6 @@ Learn more in the [Users API reference](https://developers.bitex.la/#86c5d36b-3f
 <div class="footer-nav">
   <span>
     Back:
-    <a href="/bitex-guides/concierge/">Concierge Index</a>
+    <a href="/concierge/">Concierge Index</a>
   </span>
 </div>

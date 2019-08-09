@@ -19,4 +19,4 @@ notices to your email, with a 12 month heads up.
 
 <br/>
 <hr/>
-[Back to Guides index](/bitex-guides/)
+[Back to Guides index](/)

@@ -7,6 +7,6 @@ Basically you will be receiving an email when your `Request` changes its state.
 <div class="footer-nav">
   <span>
     Back:
-    <a href="/bitex-guides/concierge/">Concierge Index</a>
+    <a href="/concierge/">Concierge Index</a>
   </span>
 </div>

@@ -57,7 +57,7 @@ You do this by creating `Outputs`, and setting:
 
 - **User:** `Who` gets paid, this can be a user you have already paid to, or someone
 new you've never paid before.
-Read more about [setting up a new recipient](/bitex-guides/concierge/create_user).
+Read more about [setting up a new recipient](/concierge/create_user).
 
 - **Port:** `Where` are they getting paid. You can mix destination `Ports` in the same 
 `Concierge Request`.
@@ -125,10 +125,10 @@ Learn more about creating, listing and showing `Concierge Requests Outputs` in t
 <div class="footer-nav">
   <span>
     Back:
-    <a href="/bitex-guides/concierge/pre_requisites/">Pre-Requisites</a>
+    <a href="/concierge/pre_requisites/">Pre-Requisites</a>
   </span>
   <span class="forth">
-      Next: <a href="/bitex-guides/concierge/get_quote">Get a quote</a>
+      Next: <a href="/concierge/get_quote">Get a quote</a>
   </span>
 </div>
 
