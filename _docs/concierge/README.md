@@ -1,11 +1,10 @@
 ---
 layout: doc
-title: "Remittances and mass disbursements (Concierge API)"
-description: "Remittances and mass disbursements (Concierge API)"
-date: 2018-12-08 8:14:30 +0600
-post_image: assets/images/service-icon3.png
-category_name: Remittances and mass disbursements
-category_slug: concierge
+title: "Concierge <small><span class='badge badge-danger'>alpha</span></small>"
+description: "Learn to use our Concierge service for remittances and mass disbursements.
+<br/>
+<small class='text-danger'>This API is still a developer preview.</small>"
+featured: true
 ---
 
 # Remittances and mass disbursements (Concierge API)
