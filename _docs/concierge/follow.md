@@ -2,34 +2,29 @@
 layout: doc
 title: "Get progress updates"
 section: Concierge
-index: 8
+index: 9
 ---
-
-# Follow the money as payments are made
 
 At this point the `Request` will be in a `working` state and, as usual, you will be notified with a [Callback](/docs/concierge/callbacks).
 
 Now, you have to track the state of each output. The output states could be:
 
-  - <span class="badge badge-danger"> rejected </span>:  Our Compliance validations did not pass.
-  - `working`:   We are trying to send the money to the target port.
-  - **`cancelled`**: This payment was cancelled while working on it.
-  - **`settled`**:   The payment was settled.
-  - **`returned`**:  Some external agent could not process the payment.
+  - <span class="badge badge-warning"> rejected </span>
+    Preliminary checks did not pass, so we didn't start the payout process,
+    your funds were not used.
+  - <span class="badge badge-primary">working</span>
+    We are working on getting the funds to the destination port.
+  - <span class="badge badge-success">settled</span>
+    The payment was completed correctly and the receiving part confirmed it.
+  - <span class="badge badge-danger">returned</span>
+    We could not process the final leg of the payment after reaching the
+    destination `port`.
+    Likely due to erroneous or invalid `WithdrawalInstructions`.
+    Your funds were used and there may be a cost for returning them.
 
-[Callbacks](/docs/concierge/callbacks) will be triggered as soon as each payment progresses, and of course, you could query the output state manually:
+[Callbacks](/docs/concierge/callbacks) will be triggered as soon as each payment progresses, and of course, you could also poll all your `Outputs` states:
 
-```
-curl "https://sandbox.bitex.la/api/concierge_request_outputs?filter[request_id]=6" \
+{% highlight javascript %}
+$ curl "https://sandbox.bitex.la/api/concierge_request_outputs?filter[request_id]=10101" \
   --header "Authorization: your_api_key"
-```
-
-<div class="footer-nav">
-  <span>
-    Back:
-    <a href="/concierge/wait">Wait for your quote</a>
-  </span>
-  <span class="forth">
-      Next: <a href="/concierge/once">Once it’s done, it’s done.</a>
-  </span>
-</div>
+{% endhighlight %}

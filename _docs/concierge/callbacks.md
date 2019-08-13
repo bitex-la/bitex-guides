@@ -1,21 +1,12 @@
 ---
 layout: doc_full
-title: "Callbacks"
-description: "Callbacks"
-date: 2018-12-08 8:14:30 +0600
-post_image: assets/images/service-icon3.png
-category_name: Remittances and mass disbursements
-category_slug: concierge
+title: "Callbacks and Webhooks"
+description: "No need to poll if you don't want to, we'll call you."
 ---
 
 # Callbacks
 
-Bitex will notify you at your registered email address when something changed in your `Request`.
-Basically you will be receiving an email when your `Request` changes its state.
+Bitex will notify you at your registered email address when something changed in your
+`Request`.
 
-<div class="footer-nav">
-  <span>
-    Back:
-    <a href="/docs/concierge/">Concierge Index</a>
-  </span>
-</div>
+Basically you will be receiving an email when your `Request` changes its state.

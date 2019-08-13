@@ -1,30 +1,65 @@
 ---
-layout: doc_full
+layout: doc
 title: "Wait for your quote"
 section: Concierge
-index: 7
+index: 8
 ---
 
-# Wait for your quote to be ready at the estimated time.
+# Wait for your quote 
 
-Once we quote your `Request`, it will be in a `quoted` state and you will be notified with a [Callback](/docs/concierge/callbacks).
+Your `Request` will have a maximum `eta` (Estimated Time of Arrival) for the quote.
+Once it's available, your `Request` will move from the
+<span class="badge badge-primary">quoted_requested</span> state, into
+<span class="badge badge-primary">quoted</span> and
+you will be notified with a [Callback](/docs/concierge/callbacks).
 
-You can also poll your `Request` to see its status and quote:
+You can also poll your `Request` to see its progress:
 
-```
-curl "https://sandbox.bitex.la/api/concierge_requests/6" \
+{% highlight javascript %}
+$ curl "https://sandbox.bitex.la/api/concierge_requests/1010" \
   --header "Authorization: your_api_key"
-```
 
-At this point, you will have a brief window of time to [Cancel](/docs/concierge/cancelling) the `Request`, if you did not, the quote will be considered accepted and the payment process will start.
+Response:
+{ 
+  "data": {
+    "id": "1010",
+    "type": "concierge_requests",
+    "attributes": {
+      // Notice the state is 'quoted' and the amount is set.
+      "state": "quoted",
+      "amount": 10500.0,
+      "port_code": "ar_ars",
+      "eta": "2000-01-01T00:20:00.000Z",
+      "cancellable_until": "2000-01-01T00:35:00.000Z"
+      "outputs_accepting": 0,
+      "outputs_rejected": 0,
+      "outputs_accepted": 1,
+      "outputs_working": 0,
+      "outputs_cancelled": 0,
+      "outputs_settled": 0,
+      "outputs_returned": 0,
+      "outputs_total": 1,
+    },
+    "relationships": {
+      // This is you, it's your Request.
+      "user": { "data": { "id": "50505", "type": "users" } },
+      // These will be your outputs. Just one in this case.
+      "outputs": {
+        "data": [ { "id": "32323", "type": "concierge_request_outputs" } ]
+      }
+    }
+  }
+}
 
-<div class="footer-nav">
-  <span>
-    Back:
-    <a href="/concierge/get_quote">Get a quote</a>
-  </span>
-  <span class="forth">
-      Next: 
-      <a href="/concierge/follow">Follow the money</a>
-  </span>
-</div>
+{% endhighlight %}
+
+At this point, you will have window of time up to `cancellable_until`
+to [Cancel](/docs/concierge/cancelling) the `Request`, if you did not,
+the quote will be considered accepted, and the request will change from
+<span class="badge badge-primary">quoted</span> to
+<span class="badge badge-primary">working</span>.
+
+All `Outputs` in the
+<span class="badge badge-primary">accepted</span>
+state will eventually move to
+<span class="badge badge-primary">working</span>.

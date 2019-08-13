@@ -14,10 +14,3 @@ Once that's done it's easy to place [Bids](https://developers.bitex.la/?version=
 Or you can check your recent [Trades](https://developers.bitex.la/?version=latest#211e05ca-e788-4239-abde-1d9bdf8d5214) to see what got bought and/or sold.
 
 We have an open source robot that can be used as an example of our API usage, and can also be used to do arbitrage between Bitex and other exchanges. [Fork it on Github](https://github.com/bitex-la/bitex-bot).
-
-<div class="footer-nav">
-  <span>
-    Back:
-    <a href="/">Guides index</a>
-  </span>
-</div>

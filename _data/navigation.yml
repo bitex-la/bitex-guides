@@ -2,10 +2,6 @@
 
 - text: Home
   url: /
-- text: Get Started
-  url: /welcome
-- text: API Keys
-  url: /api-keys
 - text: Issue Tracker
   url: https://github.com/bitex-la/bitex-guides/issues
 - text: Bitex.la

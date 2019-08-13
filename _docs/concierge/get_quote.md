@@ -1,34 +1,69 @@
 ---
-layout: doc_full
+layout: doc
 title: "Get a quote"
 section: Concierge
-index: 6
+index: 7
 ---
 
 # Get a quote
 
-Once you're done indicating all the outputs, request a quote from us.
+Once you're done defining all the outputs, as for a quote from Bitex.
 
-```
-curl -X POST "https://sandbox.bitex.la/api/concierge_requests/6/request_quote" \
+{% highlight javascript %}
+$ curl -X POST "https://sandbox.bitex.la/api/concierge_requests/1010/request_quote" \
   --header "Authorization: your_api_key"
-```
 
-Your quote may or may not be produced automatically, so you will get an ETA. (In some rare cases you may have to wait for your quote on business hours.). 
-The ETA is a short period of time, in general around 20 minutes, but could be done immedately in some cases.
+Response:
+{ 
+  "data": {
+    "id": "1010",
+    "type": "concierge_requests",
+    "attributes": {
+      "state": "quote_requested",
+      "port_code": "ar_ars",
+      "eta": "2000-01-01T00:20:00.000Z",
+      "cancellable_until": "2000-01-01T00:35:00.000Z"
+      "outputs_accepting": 0,
+      "outputs_rejected": 0,
+      "outputs_accepted": 1,
+      "outputs_working": 0,
+      "outputs_cancelled": 0,
+      "outputs_settled": 0,
+      "outputs_returned": 0,
+      "outputs_total": 1,
+    },
+    "relationships": {
+      // This is you, it's your Request.
+      "user": { "data": { "id": "50505", "type": "users" } },
+      // These will be your outputs. Just one in this case.
+      "outputs": {
+        "data": [ { "id": "32323", "type": "concierge_request_outputs" } ]
+      }
+    }
+  }
+}
+{% endhighlight %}
 
-At this point, you will have until `cancellable_until` to [Cancel](/docs/concierge/cancelling) the order, if you did not, the order will be accepted automatically and the payment process will start.
-
-Learn more about how to request a quote in the
+Learn more about how to get a quote in the
 [API Reference](https://developers.bitex.la/#9f8d8570-db6b-4f1f-8d0c-8cb440bf7f5c).
 
-<div class="footer-nav">
-  <span>
-    Back:
-    <a href="/concierge/request">Create a Concierge Request</a>
-  </span>
-  <span class="forth">
-      Next: 
-      <a href="/concierge/wait">Wait for your quote</a>
-  </span>
-</div>
+Asking for a quote will move your `Request` from the 
+<span class="badge badge-dark">draft</span> state into
+<span class="badge badge-primary">quote_requested</span>.
+
+Your quote will not be produced right away, so you'll get a promise of having a quote
+ready by a certain time and date, represented by the `eta` field.
+
+The ETA could be just a few seconds or maybe hours away, 
+depending on your destination ports and your service level agreement with Bitex.
+
+Along with the `eta` you'll get a `cancellable_until` date, which would be at least
+a few minutes after the `eta`. This will give you or your systems enough time to
+cancel the `Request` if you disagree with the quote once it's available.
+
+You can cancel your `Request` immediately if you think the ETA is too long, or
+the `cancellable_until` window is too short.
+
+Learn more about [Cancelling a Request](/docs/concierge/cancelling).
+
+Now it's time to wait for your Quote to be ready.
