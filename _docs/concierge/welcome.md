@@ -8,7 +8,6 @@ section: Concierge
 index: 1
 ---
 
-
 The `Concierge API` let's you perform remittances and mass disbursements
 from your Bitex balance to a number of supported countries.
 
