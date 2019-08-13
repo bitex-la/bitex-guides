@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc_full
 title: "Trading and Arbitrage"
 description: "Buy low, sell high, deposit, withdraw. All via API."
 featured: true

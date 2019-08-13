@@ -1,11 +1,8 @@
 ---
-layout: doc
+layout: doc_full
 title: "Get a quote"
-description: "Get a quote"
-date: 2018-12-08 8:14:30 +0600
-post_image: assets/images/service-icon3.png
-category_name: Remittances and mass disbursements
-category_slug: concierge
+section: Concierge
+index: 6
 ---
 
 # Get a quote

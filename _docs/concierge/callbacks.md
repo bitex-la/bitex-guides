@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc_full
 title: "Callbacks"
 description: "Callbacks"
 date: 2018-12-08 8:14:30 +0600

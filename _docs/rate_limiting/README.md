@@ -1,3 +1,10 @@
+---
+layout: doc_full
+title: "Quotas and Rate Limiting"
+description: "Some notes about DDOS and (not) stressing our API."
+topic: true
+---
+
 # Quotas, Rate Limiting, DDOS protection
 
 Please limit your usage to 5 requests a second, running over that limit may result in a 429 HTTP

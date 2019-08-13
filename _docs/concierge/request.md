@@ -1,39 +1,22 @@
 ---
 layout: doc
 title: "Create a Concierge Request"
-description: "Create a Concierge Request"
-date: 2018-12-08 8:14:30 +0600
-post_image: assets/images/service-icon3.png
-category_name: Remittances and mass disbursements
-category_slug: concierge
+section: Concierge
+index: 5
 ---
+A Concierge `Request` represents your intent of sending money from your account
+to multiple recipients in different countries and currencies.
 
-# Create a Concierge Request
+<h4>Drafting a Request</h4>
 
-A `Concierge Request` represents your intent of sending money from your account
-to multiple recipients in different countries and countries.
+Say you want to pay out from your Argentine Peso balance in Argentina
+to recipients in Chile and Mexico (receiving chilean and mexican pesos respectively).
 
-### Choosing your Ports
-We make this analog to sending shipments from one port to several other ports.
-Each port is identified by the country and currency to be used, for example `ar_ars`.
+You should first start by drafting a concierge `Request`, using `ar_ars` as the
+`port_code`.
 
-A list of all the ports we can serve is [available in the
-API](https://developers.bitex.la/#42dfd01d-7b02-4b71-9db8-c90ffcbee1f8).
-
-```
-curl "https://sandbox.bitex.la/api/concierge_ports"
-```
-
-Ports don't change frequently, we will let you know if we have to remove one
-of the ports you're using.
-
-### Where are you sending from?
-
-Then, to instruct that you want to pay starting with Argentine pesos from Argentina
-using the `ar_ars` port you would create a `Concierge Request`:
-
-```
-curl -X POST "https://sandbox.bitex.la/api/concierge_requests" \
+{% highlight javascript %}
+$ curl -X POST "https://sandbox.bitex.la/api/concierge_requests" \
   --header "Content-Type: application/json" \
   --header "Authorization: your_api_key" \
   --data '{
@@ -44,19 +27,42 @@ curl -X POST "https://sandbox.bitex.la/api/concierge_requests" \
       }
     }
   }'
-```
 
-Learn more about creating, listing and showing `Concierge Requests` in the
+Response:
+{
+  "data": {
+    "id": "6", // This is your request's unique identifier.
+    "type": "concierge_requests",
+    "attributes": {
+      "port_code": "ar_usd",
+      "outputs_accepting": 0,
+      "outputs_rejected": 0,
+      "outputs_accepted": 0,
+      "outputs_working": 0,
+      "outputs_cancelled": 0,
+      "outputs_settled": 0,
+      "outputs_returned": 0,
+      "outputs_total": 0
+    },
+    "relationships": {
+      // This is you, it's your Request.
+      "user": { "data": { "id": "5", "type": "users" } },
+      // No outputs specified yet, we'll get there next.
+      "outputs": { "data": [] }
+    }
+  }
+}
+
+{% endhighlight %}
+
+As you see, this creates a request in the
+<span class="badge badge-dark">draft</span> state.
+
+Learn more about creating, listing and showing Concierge `Requests` in the
 [API Reference](https://developers.bitex.la/#a65c3a0d-f2d6-4d95-b7cd-f991c5f3480b).
 
-These are the possible `Request` states: 
-
-  - `draft`:  Initial state, you can continue modifying it.
-  - `quote_requested`:  You have already requested the quote.
-  - `quoted`: We already quote.
-  - `working`: We are working to make payments.
-  - **`finished`**: We have finished paying.
-  - **`cancelled`**: You have canceled the `Request`.
+Now that you know your `Request` unique `id`, you can define the recipients
+by creating `Outputs`.
 
 ### Where are you sending to?
 

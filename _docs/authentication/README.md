@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc_full
 title: "Authentication"
 description: "Learn what kindof API access you need, and how to get it."
 topic: true
@@ -8,16 +8,16 @@ topic: true
 # Authentication and Authorization
 
 **We have 3 API access roles** and want to help you figure out which one you need,
-how to get it, and how to use it. Those roles are General Public, Bitex User, and Bitex Whitelabeler.
+how to get it, and how to use it. Those roles are General Public, Bitex User, and Bitex Master User.
 
 ## Role 1: General Public, no signup required!
 
 Anyone can read the market data, transaction history,
 reference exchange rates, and other data services. Go ahead, try the tickers endpoint right away:
 
-```
+{% highlight javascript %}
 curl https://sandbox.bitex.la/api/tickers
-```
+{% endhighlight %}
 
 See more public endpoints in the [Market Data](https://developers.bitex.la/#d7e259a6-b126-4d4c-ae66-b456242d33a6)
 API reference.
@@ -81,43 +81,43 @@ all the things you can do with your Bitex User access.
 
 **Pro Tip:** Keep your sandbox access at hand even after you move to production.
 
-## Role 3: Bitex Whitelabelers
-You can request whitelabeler access if you need to create and manage multiple Bitex accounts.
+## Role 3: Bitex Master User
+You can request Master User access if you need to create and manage multiple Bitex accounts.
 
 With this role, you would be able to create new users, and act on their behalf.
 
-Whitelabeler access is required, for example, if you
+Master User access is required, for example, if you
 want to use our concierge service for cross border remittances and mass disbursements.
 
-Whitelabeler access is not self-serviced (but there's no extra cost associated with it).
+Master User access is not self-serviced (but there's no extra cost associated with it).
 [Contact our sales team](mailto:comercial@bitex.la) and tell us more about your use case.
 
 ### First Step: Get Bitex User access.
 
 Go through all the steps for creating an API key. See [Role 2: Bitex User](Role2).
 
-### Second Step: Request Whitelabeler status
+### Second Step: Request Master User status
 
-Once you have your API key, contact us so that we can bless it with Whitelabeler access.
+Once you have your API key, contact us so that we can bless it with Master User access.
 
 For **sandbox**, just drop us a line to [developers@bitex.la](mailto:developers@bitex.la).
 
-For **production**, we'll grant Whitelabeler access once we've validated your sandbox integration.
+For **production**, we'll grant Master User access once we've validated your sandbox integration.
 
-### Finally: Try out your Whitelabeler API access.
+### Finally: Try out your Master User API access.
 
 To use your API key for managing users, just send it in an `Authorization:` header as required.
 
 ```
 curl -X POST "https://sandbox.bitex.la/api/users" \
   --header "Content-Type: application/json" \
-  --header "Authorization: whitelabel_api_key" \
+  --header "Authorization: master_user_api_key" \
   --header "Version: 2.1" \
   --data "{
     \"data\": {
         \"type\": \"users\",
         \"attributes\": {
-            \"email\": \"test@whitelabeler.com\",
+            \"email\": \"test@master-user.com\",
             \"password\": \"password\"
         }
     }
@@ -125,7 +125,7 @@ curl -X POST "https://sandbox.bitex.la/api/users" \
 ```
 
 See the [Users API Reference](https://developers.bitex.la/?version=latest#86c5d36b-3f74-499f-817e-38f9a3d789ce)
-for more endpoints available exclusively to Whitelabelers.
+for more endpoints available exclusively to Master Users.
 
 You can also act on behalf of any of the users you have created. You can use any endpoint available
 to Bitex User's, as long as you specify that user's ID in your authorization header.
@@ -139,7 +139,7 @@ curl --location --request GET "https://sandbox.bitex.la/api/coin_wallets" \
 ```
 
 Don't forget to check the [API Reference](https://developers.bitex.la/) to learn about
-all the things you can do with your Bitex Whitelabeler access.
+all the things you can do with your Bitex Master User access.
 
 <br/>
 <hr/>

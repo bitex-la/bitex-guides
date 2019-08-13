@@ -1,3 +1,9 @@
+---
+layout: doc_full
+title: "Versioning"
+description: "How we keep improving without breaking your API integration."
+topic: true
+---
 # Versioning
 
 Bitex takes an approach of **API stability as a deliverable**.

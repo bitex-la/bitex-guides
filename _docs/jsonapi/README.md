@@ -1,3 +1,9 @@
+---
+layout: doc_full
+title: "The JSON-API Standard"
+description: "What's JSON-API, why we chose it, and what that means for you."
+topic: true
+---
 # The JSON-API Standard.
 
 [JSON-API](http://jsonapi.org) is a standard format for RESTful API's in a

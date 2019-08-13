@@ -1,28 +1,18 @@
 ---
 layout: doc
 title: "Pre-Requisites"
-description: "Pre-Requisites"
-date: 2018-12-08 8:14:30 +0600
-post_image: assets/images/service-icon3.png
-category_name: Remittances and mass disbursements
-category_slug: concierge
+section: Concierge
+index: 2
 ---
 
-# Pre-Requisites
-
 Before you can start using the Concierge API for cross-border remittances you 
-will need a Bitex account with the [Whitelabeler Role](/authentication#role-3-bitex-whitelabelers)
-and funds in your Bitex balance.
+will need a Bitex account with the [Master User Role](/authentication#role-3-bitex-master-user) so that you can set up all your payees.
 
-If you need more information about signing up and funding your Bitex account
-you can contact a sales representative at [comercial@bitex.la](mailto:comercial@bitex.la)
+Also, make sure your Bitex account has funds to issue the payment.
 
-<div class="footer-nav">
-  <span>
-    Back:
-    <a href="/docs/concierge/">Concierge Index</a>
-  </span>
-  <span class="forth">
-      Next: <a href="/concierge/request">Create a Concierge Request</a>
-  </span>
-</div>
+If you need to get **Master User** status, and have funds credited to a **sandbox account**, please contact the developers team at [developers@bitex.la](mailto:developers@bitex.la).
+
+For **production**, we can help you sign up, apply to the **Master User Role** and fund your Bitex account. Just contact a accounts representative at [comercial@bitex.la](mailto:comercial@bitex.la).
+
+
+

@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc_full
 title: "Cancelling a Request"
 description: "Cancelling a Request"
 date: 2018-12-08 8:14:30 +0600

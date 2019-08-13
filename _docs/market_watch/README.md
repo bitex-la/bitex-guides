@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc_full
 title: "Market Watch"
 description: "Our market data is free. You can use it and re-distribute it."
 featured: true

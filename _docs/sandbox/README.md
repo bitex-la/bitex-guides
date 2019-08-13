@@ -1,3 +1,9 @@
+---
+layout: doc_full
+title: "Sandbox"
+description: "We have a fully featured Sandbox environment."
+topic: true
+---
 # The API Sandbox
 
 We have a Sandbox environment at [https://sandbox.bitex.la](https://sandbox.bitex.la).

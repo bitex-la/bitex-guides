@@ -1,11 +1,8 @@
 ---
 layout: doc
-title: "Follow the money as payments are made"
-description: "Follow the money as payments are made"
-date: 2018-12-08 8:14:30 +0600
-post_image: assets/images/service-icon3.png
-category_name: Remittances and mass disbursements
-category_slug: concierge
+title: "Get progress updates"
+section: Concierge
+index: 8
 ---
 
 # Follow the money as payments are made
@@ -14,7 +11,7 @@ At this point the `Request` will be in a `working` state and, as usual, you will
 
 Now, you have to track the state of each output. The output states could be:
 
-  - **`rejected`**:  Our Compliance validations did not pass.
+  - <span class="badge badge-danger"> rejected </span>:  Our Compliance validations did not pass.
   - `working`:   We are trying to send the money to the target port.
   - **`cancelled`**: This payment was cancelled while working on it.
   - **`settled`**:   The payment was settled.

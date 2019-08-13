@@ -4,22 +4,28 @@ layout: default
 
 {% include header.html %}
 {% include doc_post_header.html %}
-    <section class="layout-area bg-color1">
-        <div class="layout-wrapper section-spacing bminus-30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-lg-4">
-                        {% include doc_sidebar.html %}
-                        </div>
-                    <div class="col-md-6 col-lg-8">
-                        <h4 class="heading-4">{{page.title}}</h4>
-                        <div class="doc-content">
-                          {{content}}
-                        </div>
+
+<section class="layout-area bg-color1">
+    <div class="layout-wrapper section-spacing bminus-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-4">
+                    {% include doc_sidebar.html %}
+                    </div>
+                <div class="col-md-6 col-lg-8">
+                    <div class="doc-content text-justify">
+                      {{content}}
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-4"></div>
+                <div class="col-md-6 col-lg-8">
+                    {% include section_navigation.html %}
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
 {% include footer.html %}

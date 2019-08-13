@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc_full
 title: "Asset Management"
 description: "For investment funds or wealth managers buying Bitcoin."
 featured: true

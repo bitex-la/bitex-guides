@@ -1,11 +1,8 @@
 ---
-layout: doc
-title: "Wait for your quote to be ready at the estimated time"
-description: "Wait for your quote to be ready at the estimated time"
-date: 2018-12-08 8:14:30 +0600
-post_image: assets/images/service-icon3.png
-category_name: Remittances and mass disbursements
-category_slug: concierge
+layout: doc_full
+title: "Wait for your quote"
+section: Concierge
+index: 7
 ---
 
 # Wait for your quote to be ready at the estimated time.

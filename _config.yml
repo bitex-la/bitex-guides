@@ -8,20 +8,17 @@
 ####################################################
 
 # Site settings
-title: "Doxy - Documentation Website"
-email: "themeix@gmail.com"
-description: "Doxy is a responsive Jekyll template for your documentation or knowledgebase website"
-keywords: "jekyll, minimal jekyll, jekyll theme, responsive jekyll, seo friendly blog, super fast blog, responsive"
+title: "Bitex API and Guides"
+email: "developers@bitex.la"
+description: "Bitex API and integration guides. Learn about all endpoints and available SDK."
+keywords: "bitex, API, SDK, integration, trading, robots, arbitrage, bitcoin, BTC, BCH, bitcoin cash, exchange, payments"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://doxy.netlify.com" # the base hostname & protocol for your site, e.g. http://example.com
-cover_image: "https://themeix.com/wp-content/uploads/dooxy-responsive-html-template-preview.png"
+url: "https://api.bitex.la" # the base hostname & protocol for your site, e.g. http://example.com
+cover_image: "https://bitex.la/assets/landing_bitex/07-737e77b1a23fa91402b4f1efcbdac439.jpg"
 ## Theme Options
 animated_header: ""  #true 
-twitter_username: jekyllrb
-github_username:  jekyll
-
-
-
+twitter_username: bitexla
+github_username:  bitex-la
 
 # Build settings
 markdown: kramdown
@@ -37,9 +34,6 @@ tag_page_dir: tag
 permalink: /:title/ 
  
 collections:
-  team_members:
-    output: true
-    permalink: /team_members/:path/
   testimonials:
     output: true
     permalink: /testimonials/:path/

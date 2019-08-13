@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc_full
 title: "Create a new User"
 description: "Create a new User"
 date: 2018-12-08 8:14:30 +0600
@@ -20,7 +20,7 @@ curl -X POST "https://sandbox.bitex.la/api/users" \
     \"data\": {
         \"type\": \"users\",
         \"attributes\": {
-            \"email\": \"test@whitelabeler.com\",
+            \"email\": \"test@master-user.com\",
             \"password\": \"password\"
         }
     }

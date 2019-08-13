@@ -1,11 +1,8 @@
 ---
-layout: doc
+layout: doc_full
 title: "Once it's done, it's done"
-description: "Once it's done, it's done"
-date: 2018-12-08 8:14:30 +0600
-post_image: assets/images/service-icon3.png
-category_name: Remittances and mass disbursements
-category_slug: concierge
+section: Concierge
+index: 9
 ---
 
 # Once it's done, it's done.
