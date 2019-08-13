@@ -1,0 +1,17 @@
+<div class="sidebar-menu accordion" id="sidebar-menu">
+  {% assign items = site.docs | where: "section", page.section | sort: 'index' %}
+	<div class="menu-item">
+		<div class="menu-heading">
+      <strong class="text-uppercase">{{ page.section }}</strong>
+		</div>
+    <div class="show" data-parent="#sidebar-menu">	
+			<ul class="sub-menu list-inline">
+			{% for item in items %}
+        <li>
+          <a href="{{item.url}}">{{item.title}}</a>
+        </li>
+			{%endfor%}
+			</ul>
+		</div>
+	</div>
+</div>
