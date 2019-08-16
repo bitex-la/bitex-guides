@@ -62,3 +62,4 @@ typings/
 *.swp
 *.swo
 _site/
+.sass-cache/

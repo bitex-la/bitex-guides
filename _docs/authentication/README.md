@@ -39,7 +39,7 @@ We suggest you take look at our [Sandbox Guide](/sandbox).
 
 For sandbox it's [https://sandbox.bitex.la/auth/sign-up](https://sandbox.bitex.la/auth/sign-up).
 
-For production it's [https://sandbox.bitex.la/auth/sign-up](https://sandbox.bitex.la/auth/sign-up).
+For production it's [https://bitex.la/auth/sign-up](https://sandbox.bitex.la/auth/sign-up).
 
 ### Second step: Fill in your details and wait for your account to be approved.
 
@@ -94,7 +94,7 @@ Master User access is not self-serviced (but there's no extra cost associated wi
 
 ### First Step: Get Bitex User access.
 
-Go through all the steps for creating an API key. See [Role 2: Bitex User](Role2).
+Go through all the steps for creating an API key. See [Role 2: Bitex User](/docs/authentication/README#role-2-bitex-users)
 
 ### Second Step: Request Master User status
 
@@ -113,15 +113,15 @@ curl -X POST "https://sandbox.bitex.la/api/users" \
   --header "Content-Type: application/json" \
   --header "Authorization: master_user_api_key" \
   --header "Version: 2.1" \
-  --data "{
-    \"data\": {
-        \"type\": \"users\",
-        \"attributes\": {
-            \"email\": \"test@master-user.com\",
-            \"password\": \"password\"
+  --data '{
+    "data": {
+        "type": "users",
+        "attributes": {
+            "email": "test@master-user.com",
+            "password": "password"
         }
     }
-}"
+}'
 ```
 
 See the [Users API Reference](https://developers.bitex.la/?version=latest#86c5d36b-3f74-499f-817e-38f9a3d789ce)

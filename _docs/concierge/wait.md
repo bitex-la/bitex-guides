@@ -11,7 +11,7 @@ Your `Request` will have a maximum `eta` (Estimated Time of Arrival) for the quo
 Once it's available, your `Request` will move from the
 <span class="badge badge-primary">quoted_requested</span> state, into
 <span class="badge badge-primary">quoted</span> and
-you will be notified with a [Callback](/docs/concierge/callbacks).
+you will be notified with a [Callback](https://developers.bitex.la/?version=latest#fbe8a54d-6785-4e9f-bc4d-f6cfe9e10f6a).
 
 You can also poll your `Request` to see its progress:
 

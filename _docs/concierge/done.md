@@ -18,7 +18,7 @@ have never moved from your balance, and funds
 for <span class="badge badge-danger">returned</span> `Outputs` will be credited
 to your Bitex balance minus costs for returning them.
 
-You'll get a `Request` finalization [Callback](/docs/concierge/callbacks),
+You'll get a `Request` finalization [Callback](https://developers.bitex.la/?version=latest#fbe8a54d-6785-4e9f-bc4d-f6cfe9e10f6a),
 and you'll also be able to query your request forever like so:
 
 {% highlight javascript %}
