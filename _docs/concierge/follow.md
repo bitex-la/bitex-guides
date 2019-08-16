@@ -5,7 +5,7 @@ section: Concierge
 index: 9
 ---
 
-At this point the `Request` will be in a `working` state and, as usual, you will be notified with a [Callback](/docs/concierge/callbacks).
+At this point the `Request` will be in a `working` state and, as usual, you will be notified with a [Callback](https://developers.bitex.la/?version=latest#fbe8a54d-6785-4e9f-bc4d-f6cfe9e10f6a).
 
 Now, you have to track the state of each output. The output states could be:
 
@@ -22,7 +22,7 @@ Now, you have to track the state of each output. The output states could be:
     Likely due to erroneous or invalid `WithdrawalInstructions`.
     Your funds were used and there may be a cost for returning them.
 
-[Callbacks](/docs/concierge/callbacks) will be triggered as soon as each payment progresses, and of course, you could also poll all your `Outputs` states:
+[Callbacks](https://developers.bitex.la/?version=latest#fbe8a54d-6785-4e9f-bc4d-f6cfe9e10f6a) will be triggered as soon as each payment progresses, and of course, you could also poll all your `Outputs` states:
 
 {% highlight javascript %}
 $ curl "https://sandbox.bitex.la/api/concierge_request_outputs?filter[request_id]=10101" \
