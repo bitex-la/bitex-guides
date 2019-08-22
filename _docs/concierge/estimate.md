@@ -16,7 +16,7 @@ from an actual `Request` quote, as you'll see next.
 The estimate can be calculated from the origin `port` and the total amount to be delivered at a destination `port`.
 
 {% highlight javascript %}
-$ curl -X POST "https://sandbox.bitex.la/api/remittance_quotes" \
+$ curl -X POST "https://sandbox.bitex.la/api/concierge_estimates" \
   --header "Content-Type: application/json" \
   --data '{
     "data": {
