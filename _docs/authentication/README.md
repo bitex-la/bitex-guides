@@ -69,12 +69,12 @@ To use your API just send it in an `Authorization:` header as required.
 
 For example, this is how you would list your [crypto coin balances](https://developers.bitex.la/#fa6a0343-880b-4944-83ae-9a8e7367e3df).
 
-```
+{% highlight javascript %}
 curl --location --request GET "https://sandbox.bitex.la/api/coin_wallets" \
   --header "Content-Type: application/json" \
   --header "Authorization: your_api_key" \
   --header "Version: 2.1"
-```
+{% endhighlight %}
 
 Check the [API Reference](https://developers.bitex.la/) to learn about
 all the things you can do with your Bitex User access.
@@ -108,7 +108,7 @@ For **production**, we'll grant Master User access once we've validated your san
 
 To use your API key for managing users, just send it in an `Authorization:` header as required.
 
-```
+{% highlight javascript %}
 curl -X POST "https://sandbox.bitex.la/api/users" \
   --header "Content-Type: application/json" \
   --header "Authorization: master_user_api_key" \
@@ -122,7 +122,7 @@ curl -X POST "https://sandbox.bitex.la/api/users" \
         }
     }
 }'
-```
+{% endhighlight %}
 
 See the [Users API Reference](https://developers.bitex.la/?version=latest#86c5d36b-3f74-499f-817e-38f9a3d789ce)
 for more endpoints available exclusively to Master Users.
@@ -132,11 +132,11 @@ to Bitex User's, as long as you specify that user's ID in your authorization hea
 
 For example, this is how you would list a user's crypto balances.
 
-```
+{% highlight javascript %}
 curl --location --request GET "https://sandbox.bitex.la/api/coin_wallets" \
   --header "Content-Type: application/json" \
   --header "Authorization: jruFCnab2539vwj2s684nsga82nda; user=123"
-```
+{% endhighlight %}
 
 Don't forget to check the [API Reference](https://developers.bitex.la/) to learn about
 all the things you can do with your Bitex Master User access.
