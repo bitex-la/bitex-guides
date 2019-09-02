@@ -8,10 +8,12 @@ section: User Management
 index: 1
 ---
 
+Bitex lets you manage multiple `User` accounts as if they were your own.
+
 You will need to create Bitex `User` accounts to use them as `Concierge` payees,
 or if you're an asset manager that needs separate accounts for each customer.
 
-In order to create them, you will need to request `Master User` permissions.
+You will need to request `Master User` permissions before you can do this.
 
 A Bitex `User` is a full fledged account: It has balances, can receive and issue `Concierge` remittances, use the `Exchange`, among other things.
 
