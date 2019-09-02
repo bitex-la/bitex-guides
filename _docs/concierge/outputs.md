@@ -11,7 +11,7 @@ indicates **who** gets paid, **where**, **how much**, and **how**.
 
 The `user` field refers to the `User` **who** gets paid, this can be someone you have
 already paid, or someone new you've never paid before. 
-Read more about [setting up new users](https://developers.bitex.la/?version=latest#85010b85-99a2-48b2-a38f-3a32b379327d).
+Read more about [setting up new users](/docs/users/welcome/).
 
 The `port` is **where** they are getting paid.
 You can have multiple `ports` in the same `Request`.
