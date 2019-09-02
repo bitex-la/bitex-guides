@@ -135,7 +135,7 @@ For example, this is how you would list a user's crypto balances.
 ```
 curl --location --request GET "https://sandbox.bitex.la/api/coin_wallets" \
   --header "Content-Type: application/json" \
-  --header "Authorization: jruFCnab2539vwj2s684nsga82nda; user=123"
+  --header "Authorization: master_user_api_key; user=123"
 ```
 
 Don't forget to check the [API Reference](https://developers.bitex.la/) to learn about
