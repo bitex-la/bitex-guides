@@ -1,0 +1,35 @@
+<!-- Start Headline Area -->
+<div class="headline-area bg-color3">
+    <div class="headline-wrapper ">
+        <div class="container">
+            <div class="row">
+                {% assign featured = site.docs | where: "featured", true %}
+                {% for post in featured %}
+                  <div class="col-md-6 col-lg-4">
+                      <div class="headline-box wow fadeInUp" data-wow-duration="1s" style="visibility:visible; animation-duration:1s; animation-name:fadeInUp;">
+                          <div class="headline-content">
+                            <h4 class="heading-4">
+                              <a href="{{site.baseurl}}{{post.url}}">
+                                {% if post.featured_title %}
+                                  {{post.featured_title }}
+                                {% else %}
+                                  {{post.title }}
+                                {% endif %}
+                              </a>
+                            </h4>
+                            <p>{{post.description}}</p>
+                            <a href="{{site.baseurl}}{{post.url}}" class="btn btn-style3">Read Now</a>
+                          </div>
+                      </div>
+                  </div>
+                  {% if 2 == forloop.index0 | modulo: 3 %}
+                    </div>
+                    <br/>
+                    <div class="row">
+                  {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Headline Area -->

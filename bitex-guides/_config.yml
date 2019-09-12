@@ -1,0 +1,56 @@
+####################################################
+#
+# Welcome to Applin Doxy Jekyll Template
+#
+# Product Link : https://themeix.com/product/doxy-documentation-website-jekyll-template/
+# Version : v2.1.0
+#
+####################################################
+
+# Site settings
+title: "Bitex API and Guides"
+email: "developers@bitex.la"
+description: "Bitex API and integration guides. Learn about all endpoints and available SDK."
+keywords: "bitex, API, SDK, integration, trading, robots, arbitrage, bitcoin, BTC, BCH, bitcoin cash, exchange, payments"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://api.bitex.la" # the base hostname & protocol for your site, e.g. http://example.com
+cover_image: "https://bitex.la/assets/landing_bitex/07-737e77b1a23fa91402b4f1efcbdac439.jpg"
+## Theme Options
+animated_header: ""  #true 
+twitter_username: bitexla
+github_username:  bitex-la
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+
+# Tag Options
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+permalink: /:title/ 
+ 
+collections:
+  testimonials:
+    output: true
+    permalink: /testimonials/:path/
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/  d
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
