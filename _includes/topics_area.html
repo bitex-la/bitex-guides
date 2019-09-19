@@ -14,7 +14,13 @@
             <div class="col-md-6 col-lg-4">
               <article class="topics-service bg-color3 wow fadeIn" data-wow-duration="2s">
                 <header class="topics-title">
-                  <h4 class="heading-4 text-capitalize">{{ post.title }}</h4>
+                  <h4 class="heading-4 text-capitalize">
+                    {% if post.featured_title %}
+                      {{post.featured_title }}
+                    {% else %}
+                      {{post.title }}
+                    {% endif %}
+                  </h4>
                 </header>
                 <p>{{post.description}}</p>
                 <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark btn-sm">Read Now</a>

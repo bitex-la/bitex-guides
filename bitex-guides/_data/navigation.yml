@@ -1,8 +1,0 @@
-#Please use the main menu items under the "text"
-
-- text: Home
-  url: /
-- text: Issue Tracker
-  url: https://github.com/bitex-la/bitex-guides/issues
-- text: Bitex.la
-  url: https://bitex.la

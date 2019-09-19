@@ -6,7 +6,7 @@ index: 2
 ---
 
 Before you can start using the Concierge API for cross-border remittances you 
-will need a Bitex account with the [Master User Role](/docs/authentication/README#role-3-bitex-master-user) so that you can set up all your payees.
+will need a Bitex account with the [Master User Role](/docs/authentication/master_user) so that you can set up all your payees.
 
 Also, make sure your Bitex account has funds to issue the payment.
 
