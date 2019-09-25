@@ -7,7 +7,7 @@ index: 7
 
 # Get a quote
 
-Once you're done defining all the outputs, as for a quote from Bitex.
+Once you're done defining all the outputs, ask for a quote from Bitex.
 
 {% highlight javascript %}
 $ curl -X POST "https://sandbox.bitex.la/api/concierge_requests/1010/request_quote" \
@@ -43,6 +43,10 @@ Response:
   }
 }
 {% endhighlight %}
+
+If you are requesting a quote to our sandbox platform, please let us know by sending an email to [developers@bitex.la](mailto:developers@bitex.la). This step is not necessary for quotes to production.
+
+In your mail you can request custom rates to enable testing for diferent scenarios. Just write to us and let us know.
 
 Learn more about how to get a quote in the
 [API Reference](https://developers.bitex.la/#9f8d8570-db6b-4f1f-8d0c-8cb440bf7f5c).

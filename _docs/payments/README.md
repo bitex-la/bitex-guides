@@ -7,7 +7,7 @@ featured: true
 
 # Accept Bitcoin Payments
 
-You can start accepting bitcoin payments using our [Merchant](https://developers.bitex.la/?version=latest#c19db8f0-8a2b-4eba-a928-2f134e39b423) endpoints
+You can start accepting bitcoin payments using our [Merchant](https://developers.bitex.la/?version=latest#d02432d6-444c-40bb-b8bf-c12fb5fe3a90) endpoints
 
 We can quote your customer local currency into bitcoin so you can request them to pay "100 ARS in Bitcoin".
 

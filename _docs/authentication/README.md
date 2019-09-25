@@ -13,4 +13,3 @@ how to get it, and how to use it.
 
 Those roles are **General Public**,
 **User**, and **Master User**.
-
