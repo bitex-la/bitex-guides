@@ -5,30 +5,13 @@ section: User Management
 index: 2
 ---
 
-You start creating a `User` with just an email and a password. 
-We rely on you to confirm this email address is correct, you can use
-a bogus email address if you want to.
+You start creating a `User`. 
 
-There are two main use cases for `User` accounts created by a `Master User`.
-
-### Private Access
-
-If the `User` accounts you create are only for your internal use, we suggest
-you make up an email address in your domain, and a random password.
-
-Addresses like `user+1234@yourdomain.com` are valid and encouraged, where 1234
-could be their ID in your database.
-
-### Shared Access
-
-You may share access with them by using their own email address,
-and a password you both know.  You could also create a random password
-and request they reset it using the
-[reset password form](https://bitex.la/auth/password/retrieve).
+We will create a random email with the following template "(random_string)_whitelabeler.id@bitex.la" and a random password.
 
 ### Let's get to it
 
-To create a user just post their credentials to the users endpoint like so
+To create a user just make a post request to the users endpoint like so
 
 {% highlight javascript %}
 curl --location --request POST "https://sandbox.bitex.la/api/users" \
@@ -37,11 +20,7 @@ curl --location --request POST "https://sandbox.bitex.la/api/users" \
   --header "Version: 2.1" \
   --data '{
     "data": {
-        "type": "users",
-        "attributes": {
-            "email": "test+1234@example.com",
-            "password": "5up3r-r4nd0m"
-        }
+        "type": "users"
     }
   }'
 
