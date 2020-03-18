@@ -1,8 +1,8 @@
 ---
 layout: doc
-title: "Issue and Person lifecycles"
+title: "Issue and User lifecycles"
 section: User Management
-index: 8
+index: 7
 ---
 
 ### An `Issue` lifecycle is as follows:
@@ -50,16 +50,16 @@ After being reviewed, it will move to one of:
 
 #### <span class="badge badge-success">approved</span>
 
-The `Issue's` `Seeds` are now part of the `Person's` permanent file. If this
-was the `Person's` first `Issue`, then it will be 
+The `Issue's` `Seeds` are now part of the `User`'s permanent file. If this
+was the `User`'s first `Issue`, then it will be 
 <span class="badge badge-success">enabled</span> automatically.
 
 #### <span class="badge badge-danger">rejected</span>
 
-Our compliance team rejected adding this `Issue's` `Seeds` to the `Person's`
+Our compliance team rejected adding this `Issue's` `Seeds` to the `User`'s
 permanent file.
-The `Issue` rejection has no direct automatic effect in the `Person's` state,
-so you should check the `Person` to see if it changed.
+The `Issue` rejection has no direct automatic effect in the `User`'s state,
+so you should check the `User` to see if it changed.
 
 #### <span class="badge badge-danger">dismissed</span>
 
@@ -71,18 +71,20 @@ unreplied observations, becomes irrelevant, or it seems to have been created by 
 All `Issues` that spend weeks in a non-final state will be picked up and 
 abandoned by our system.
 
-### A `Person` lifecycle is as follows:
+### A `User` lifecycle is as follows:
+
+You can check the `User`'s `compliance_state` attribute to see their current status.
 
 #### <span class="badge badge-dark">new</span>
 
-A `User` has just been created, and this `Person` was created along with it,
+A `User` has just been created, and this `User` was created along with it,
 to track all the aspects pertaining to our compliance program.
 
 #### <span class="badge badge-success">enabled</span>
 
-When a `Person's` first issue is <span class="badge badge-success">approved</span>,
-the `Person` is also <span class="badge badge-success">enabled</span>.  
-A `Person's` state is independent from the state of their `Issues`.
+When a `User`'s first issue is <span class="badge badge-success">approved</span>,
+the `User` is also <span class="badge badge-success">enabled</span>.  
+A `User`'s state is independent from the state of their `Issues`.
 Having an `Issue` approved does not mean the person will be enabled.
 The next possible states are 
 <span class="badge badge-warning">disabled</span> or
@@ -92,18 +94,18 @@ The next possible states are
 
 Our compliance team is always monitoring transactional risk profiles and
 keeping customer information updated. Sometimes, when transactional risk
-increases, the `Person` will be temporarily disabled, and an `Issue` will
+increases, the `User` will be temporarily disabled, and an `Issue` will
 be created with some `Observations` for them to reply.
 
-If a `Person` is <span class="badge badge-warning">disabled</span>
+If a `User` is <span class="badge badge-warning">disabled</span>
 and you can't find an `Issue` with `Observations`
 to reply to, it means the investigation is internal and we will update
-the `Person's` status to 
+the `User`'s status to 
 <span class="badge badge-success">enabled</span> or
 <span class="badge badge-danger">rejected</span>.
 
 #### <span class="badge badge-danger">rejected</span>
 
-The `Person` account has been permanently suspended.
+The `User` account has been permanently suspended.
 
 

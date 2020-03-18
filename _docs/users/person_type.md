@@ -2,25 +2,26 @@
 layout: doc
 title: Person Type
 section: User Management
-index: 4
+index: 3
 ---
 
-Bitex `Person's` may be __Natural Persons__ (humans) or __Legal Entities__ (companies).
+Bitex `User`'s may be **Natural Persons** (humans) or **Legal Entities** (companies).
 
-You decide which type of `Person` you're setting up by adding either a
+You decide which type of **Person** you're setting up by adding either a
 `NaturalDocketSeed` or `LegalEntityDocketSeed` in their first `Issue`.
 
-Once decided, the `Person's` type cannot be changed.
+Once decided, the `User` type cannot be changed.
 
-<div class="alert alert-warning">
 All fields are optional in the API, but you must adhere to the compliance program
 agreed with Bitex. Otherwise, our compliance team will request changes and amends before
 accepting the person as a customer.
-</div>
+
+See all the fields in the
+[API reference](https://developers.bitex.la/?version=latest#6bab2045-7754-43a3-ba99-d3d54ded0c62)
 
 ### Natural Persons
 
-For a __Natural Person__ you create a `NaturalDocketSeed` related to the `Issue`
+For a **Natural Person** you create a `NaturalDocketSeed` related to the `Issue`
 and set attributes like
 their name, nationality, date of birth, marital status, whether they are a
 [politically exposed person](https://en.wikipedia.org/wiki/Politically_exposed_person).
@@ -28,7 +29,7 @@ their name, nationality, date of birth, marital status, whether they are a
 {% highlight javascript %}
 curl --location --request POST "https://sandbox.bitex.la/api/natural_docket_seeds" \
   --header "Content-Type: application/json" \
-  --header "Authorization: master_user_api_key; user=692" \
+  --header "Authorization: your_api_key" \
   --header "Version: 2.0" \
   --data '{
     "data": {
@@ -79,12 +80,9 @@ Response:
 
 The `NaturalDocketSeed` will be created and associated to your current `Issue`.
 
-See all the fields in the [Natural Docket API
-reference](https://developers.bitex.la/?version=latest#8096ce68-170d-4f2a-93fd-797439ac6973)
-
 ### Legal Entities
 
-For a __Legal Entity__ you create a `LegalEntityDocketSeed` related to the
+For a **Legal Entity** you create a `LegalEntityDocketSeed` related to the
 `Issue` and set attributes like
 the company name, country of incorporation, business description.
 
@@ -92,7 +90,7 @@ the company name, country of incorporation, business description.
 
 curl --location --request POST "https://sandbox.bitex.la/api/legal_entity_docket_seeds" \
   --header "Content-Type: application/json" \
-  --header "Authorization: master_user_api_key; user=692" \
+  --header "Authorization: your_api_key" \
   --header "Version: 2.0" \
   --data '{
     "data": {
@@ -133,7 +131,4 @@ Response:
 }
 
 {% endhighlight %}
-
-See all the fields in the [Legal Entity Docket API
-reference](https://developers.bitex.la/?version=latest#973813cb-96ff-454b-8c7c-8c257affdadc)
 

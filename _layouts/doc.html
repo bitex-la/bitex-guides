@@ -3,11 +3,22 @@ layout: default
 ---
 
 {% include header.html %}
-{% include doc_post_header.html %}
+{% include page_header_empty.html %}
 
 <section class="layout-area bg-color1">
-    <div class="layout-wrapper section-spacing bminus-30">
+    <div class="layout-wrapper section-spacing">
         <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                  <nav class="layout-breadcrumb">
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="{{site.url}}">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">{{page.section}}</li>
+                          <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
+                      </ol>
+                  </nav>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-4 col-lg-4">
                     {% include doc_sidebar.html %}
@@ -28,4 +39,5 @@ layout: default
     </div>
 </section>
 
+{% include call_to_action.html %}
 {% include footer.html %}

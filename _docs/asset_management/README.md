@@ -3,6 +3,7 @@ layout: doc_full
 title: "Asset Management"
 description: "For investment funds or wealth managers buying Bitcoin."
 featured: true
+position: 4
 ---
 
 Bitex has two ways to help __asset managers__ expose their customers to

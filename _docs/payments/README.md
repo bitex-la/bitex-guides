@@ -3,6 +3,7 @@ layout: doc_full
 title: "Accept Bitcoin Payments"
 description: "Quote prices in fiat, get paid in bitcoin, and settle to fiat."
 featured: true
+position: 5
 ---
 
 # Accept Bitcoin Payments

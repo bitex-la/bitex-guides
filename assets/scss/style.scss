@@ -94,10 +94,10 @@ INDEX SASS
             float:right;
         }
         .header-logo{
-            margin: 10px  0;
+            margin: 5px 0 0 0;
             display: block;
             @include mobile{
-              margin: 8px 0;
+              margin: 0;
               width: 110px;
             }
         }
@@ -358,9 +358,9 @@ INDEX SASS
     }
 }
 .full-padding{
-    padding: 300px 0;
+    padding: 200px 0;
     @include tablet{
-        padding: 200px 0;
+      padding: 100px 0;
     }
 }
 .slider-search-form{
@@ -2200,7 +2200,7 @@ ul#results-container {
   transation: all .4s linear 0s;
 }
 
-p > a {
+p > a, .doc-content > ul > li > a {
   color: #007bff;
 }
 

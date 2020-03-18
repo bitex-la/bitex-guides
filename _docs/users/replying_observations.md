@@ -2,7 +2,7 @@
 layout: doc
 title: "Replying Observations"
 section: User Management
-index: 7
+index: 6
 ---
 
 Our compliance officers may ask for corrections or clarifications on an 
@@ -19,7 +19,7 @@ which will change its state to
 of `Observations` will be available as one of the `Issue's` __relationships__ and
 in full in the __included__ section.
 
-The `Person` state will remain the same, in this case <span class="badge badge-dark">new</span>.
+The `User` `compliance_state` will remain the same, in this case <span class="badge badge-dark">new</span>.
 
 All `Observations` have a __note__ attribute with a custom text written by
 our compliance team explaining the specific situation that caused this
@@ -42,7 +42,7 @@ the `IdentificationSeed` was illegible.
 {% highlight javascript %}
 curl "https://sandbox.bitex.la/api/issues/1657" \
   --header "Content-Type: application/json" \
-  --header "Authorization: master_user_api_key; user=692" \
+  --header "Authorization: your_api_key" \
   --header "Version: 2.0"
 
 Response:
@@ -112,7 +112,7 @@ or it can be placeholder text just to mark the `Observation` as answered.
 {% highlight javascript %}
 curl --location --request PATCH "https://sandbox.bitex.la/api/observations/341" \
   --header "Content-Type: application/json" \
-  --header "Authorization: master_user_api_key; user=692" \
+  --header "Authorization: your_api_key" \
   --header "Version: 2.0"
   --data '{
     "data": {
@@ -127,5 +127,5 @@ curl --location --request PATCH "https://sandbox.bitex.la/api/observations/341" 
 When all `Observations` have been answered the `Issue` state will be 
 <span class="badge badge-primary">answered</span> and will be reviewed again.
 
-See the [API reference](https://developers.bitex.la/?version=latest#d3b5f663-5b2a-429a-b5eb-3ae51cc28b48)
+Check out the [API reference](https://developers.bitex.la/?version=latest#5b26b3f8-7fa9-4f6b-9a7b-4be2ac689b73)
 for examples on replying to `Observations` and updating `Seeds`.

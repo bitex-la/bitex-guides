@@ -2,7 +2,7 @@
 layout: doc
 title: Compliance Officer Review
 section: User Management
-index: 6
+index: 5
 ---
 
 Once your `User's` `Issue` has all the required `Seeds` and `Attachments` created,
@@ -11,7 +11,7 @@ it's time to submit it for review.
 {% highlight javascript %}
 curl --location --request POST "https://sandbox.bitex.la/api/issues/1657/complete" \
   --header "Content-Type: application/json" \
-  --header "Authorization: master_user_api_key; user=692" \
+  --header "Authorization: your_api_key" \
   --header "Version: 2.0"
 
 Response:
@@ -37,7 +37,7 @@ You can now start fetching the `Issue` and checking its state attribute.
 {% highlight javascript %}
 curl "https://sandbox.bitex.la/api/issues/1657" \
   --header "Content-Type: application/json" \
-  --header "Authorization: master_user_api_key; user=692" \
+  --header "Authorization: your_api_key" \
   --header "Version: 2.0"
 
 Response:

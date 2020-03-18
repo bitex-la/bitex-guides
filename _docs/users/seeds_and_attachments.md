@@ -2,10 +2,10 @@
 layout: doc
 title: Seeds and Attachments
 section: User Management
-index: 5
+index: 4
 ---
 
-You can then continue completing a `Person's` initial issue by submitting other `Seeds`,
+You can then continue completing a `User`'s initial issue by submitting other `Seeds`,
 according to the compliance program you've agreed to.
 
 All `Seeds` may also have `Attachments` which contain base64 encoded files pertaining
@@ -18,7 +18,7 @@ For a __legal entity__ it could be the company bylaws, registration certificates
 The `Attachment` may be a scan of the actual document.
 
 ##### `DomicileSeed`
-The `Person's` domicile, with a __proof of residence__ as the `Attachment`.
+The `User`'s domicile, with a __proof of residence__ as the `Attachment`.
 Usually a scan of a utility bill, but other documents produced by a well known third party may
 be accepted too.
 
@@ -29,14 +29,14 @@ related `Attachment` which could be payment slips, tax return forms, or any
 document that serves as proof of legitimate income.
 
 ##### `NoteSeed`
-These can be used to include arbitrary text and attachments in a `Person's`
+These can be used to include arbitrary text and attachments in a `User`
 `Issue` with any clarifications you may find relevant.
 
 Some compliance programs may require you to send arbitrary data which cannot be
 stored in other `Seed` types, you will use `NoteSeeds` for those.
 
 ##### `EmailSeed` and `PhoneSeed`
-The `Person's` email addresses and phone numbers. No attachments needed.
+The `User` email addresses and phone numbers. No attachments needed.
 
 ##### `ArgentinianInvoicingDetailSeed` and `ChileanInvoicingDetailSeed`
 
@@ -51,7 +51,7 @@ Creating an `IdentificationSeed` and one `Attachment` for it.
 {% highlight javascript %}
 curl --location --request POST "https://sandbox.bitex.la/api/identification_seeds" \
   --header "Content-Type: application/json" \
-  --header "Authorization: master_user_api_key; user=692" \
+  --header "Authorization: your_api_key" \
   --header "Version: 2.0" \
   --data '{
     "data": {
@@ -99,7 +99,7 @@ created before.
 {% highlight javascript %}
 curl --location --request POST "https://sandbox.bitex.la/api/attachments" \
   --header "Content-Type: application/json" \
-  --header "Authorization: master_user_api_key; user=692" \
+  --header "Authorization: your_api_key" \
   --header "Version: 2.0" \
   --data '{
     "data": {
@@ -120,8 +120,7 @@ curl --location --request POST "https://sandbox.bitex.la/api/attachments" \
 {% endhighlight %}
 
 Other seed types are created in the same way, and they all support attachments.
-See the [Compliance API reference](https://developers.bitex.la/?version=latest#0152581e-7b56-459a-a815-b755cd889d46)
+Check out the [Compliance API reference](https://developers.bitex.la/?version=latest#5b26b3f8-7fa9-4f6b-9a7b-4be2ac689b73)
 for more examples.
 
 Moving on, we will submit the `Issue` for compliance approval and wait for their response.
-
