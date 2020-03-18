@@ -61,5 +61,3 @@ Response:
 }
 
 {% endhighlight %}
-
-
