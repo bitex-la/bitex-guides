@@ -30,7 +30,3 @@ for any **sandbox** administrative task, such as:
 - Crediting fiat deposits.
 - Processing fiat or crypto withdrawals.
 - Following through with a Crossborder payment.
-
-<br/>
-<hr/>
-[Back to Guides index](/)
