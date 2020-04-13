@@ -29,6 +29,10 @@ h1, h2, h3, h4, h5, h6{
       }
     }
 }
+
+.text-white{
+  font-color: #fafafa;
+}
 .heading-1 { 
   font-size:$font-size-h1;
   @include tablet{

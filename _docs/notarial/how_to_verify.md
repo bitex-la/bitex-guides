@@ -52,3 +52,9 @@ you can find an **OP_RETURN** containing the `content_hash_digest`.
 Following the example above, you can visit [that transaction](https://www.blockchain.com/bch/tx/68324660f55bc5668d877ca290f833b39148b4d5a96d45b5c33c4133fc171263) in a public block explorer, then search for `d2be1389eb3cff158114316cdd06207cae455b06539ef963bb7558834ae120a5`
 in that page.
 
+### Example scripts
+
+We've built python and ruby scripts that download the published `Attestations`, verify them on-chain
+and output some statistical information about Bitex activities.
+
+You can [find them both here](https://github.com/bitex-la/bitex-guides/tree/master/scripts), they're MIT licensed.

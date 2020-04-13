@@ -70,17 +70,6 @@
     background: transparent;
 }
 
-.bg-cover1{
-    background:url(../images/page-title-img.jpg);
-	background-size:cover;
-	
-}
-.bg-cover2{
-    background:url(../images/page-title-img2.jpg);
-	background-size:cover;
-	 
-}
-
 %overlay-color{
     @include background-opacity($bg-color2, .9);
     position: absolute;

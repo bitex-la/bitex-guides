@@ -12,11 +12,11 @@ $font-color4: #ffffff;
 $link-color:#404040;
 $hover-color:#000000; 
 $placeholder-color:#777777;
-$bg-color-default:#ffffff;
-$bg-color2:#000000;
+$bg-color-default:#fafafa;
+$bg-color2:#143e66;
 $bg-color3:#f2f6fb;
 $button-bg : #ffffff;
-$button-bg2 : #000000;
+$button-bg2 : $bg-color2;
 /* Typography */
 $font-family-default: 'Poppins', sans-serif;
 $font-size-default:     16px ;
