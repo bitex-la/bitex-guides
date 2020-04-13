@@ -8,7 +8,7 @@
 <nav class="page-pagination">
   {% if prev_page %}
     <div class='pull-left'>
-       <a class="page-link prev-btn" href="{{prev_page.url}}">
+       <a class="prev-btn" href="{{prev_page.url}}">
          <i class="fa fa-angle-double-left"></i>
          {{ prev_page.title }}
        </a>
@@ -17,7 +17,7 @@
 
   {% if next_page %}
     <div class='pull-right'>
-      <a class="page-link next-btn" href="{{next_page.url}}">
+      <a class="next-btn" href="{{next_page.url}}">
         {{ next_page.title }}
         <i class="fa fa-angle-double-right"></i>
       </a>
