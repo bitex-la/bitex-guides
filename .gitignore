@@ -63,3 +63,5 @@ typings/
 *.swo
 _site/
 .sass-cache/
+
+.jekyll-cache/
