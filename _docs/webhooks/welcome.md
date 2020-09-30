@@ -8,7 +8,7 @@ topic: true
 
 When you create a [CrossBorder Request](/docs/cross_border/welcome) and you're
 left waiting for it to reach destination, or when you create a
-[Payment](/docs/payments/README/)
+[Payment](/docs/payments/welcome/)
 and are waiting for the customer to pay, it's possible that you'll end up
 **polling data** from our API, until you see the change you expected.
 
@@ -80,7 +80,7 @@ can have a look at what you received in real time.
 The [API Reference](https://developers.bitex.la/) includes example events you can
 **trigger yourself to mimic our servers**.
 
-[Postman](/docs/postman/postman) users can
+[Postman](/docs/postman/welcome) users can
 just change their
 <code>&#123;&#123; webhook_url &#125;&#125;</code>
 environment variable to point to your own url, 

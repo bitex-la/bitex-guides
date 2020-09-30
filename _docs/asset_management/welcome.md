@@ -10,7 +10,7 @@ Bitex has two ways to help __asset managers__ expose their customers to
 Bitcoin trading.
 
 Whatever kind of integration you choose, we would expect you to first start
-in our [sandbox API environment](/docs/sandbox/README) and then move to
+in our [sandbox API environment](/docs/sandbox/welcome) and then move to
 **production** once everything is ready.
 
 #### A regular Bitex account for the Asset Manager.
@@ -22,7 +22,7 @@ Your account may be subject to enhanced due dilligence for compliance reasons,
 and you will only be able to deposit and withdraw fiat currencies from
 your firm's bank accounts.
 
-Start by [getting your User API access](/docs/authentication/user).
+Start by [getting your User API access](/docs/authentication/welcome).
 
 Then read the [public market
 data](https://developers.bitex.la/?version=latest#d7e259a6-b126-4d4c-ae66-b456242d33a6) endpoints
@@ -46,9 +46,9 @@ risk based compliance program. This method is more accesible for firms that
 don't have an adequate compliance program  and regulation for the jurisdictions
 Bitex works with, but still have a large customer base.
 
-Learn about the [master user role](/docs/authentication/user).
+Learn about the [master user role](/docs/authentication/welcome).
 
-Set up your integration for creating and [managing multiple user accounts](/docs/users/welcome/),
+Set up your integration for creating and [managing multiple user accounts](/docs/users/welcome),
 a process that includes compliance due dilligence, but still
 fully contained in an API.
 

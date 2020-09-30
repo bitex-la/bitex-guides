@@ -33,7 +33,7 @@ for **sandbox** or [https://bitex.la/auth/sign-up](https://sandbox.bitex.la/auth
 **production**.
 
 You should sign up in our **sandbox** environment then replicate the steps in **production**.
-We suggest you take look at our [Sandbox Guide](/docs/sandbox/README).
+We suggest you take look at our [Sandbox Guide](/docs/sandbox/welcome).
 
 ### 2. Complete the KYC procedures.
 

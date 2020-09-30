@@ -10,10 +10,10 @@ index: 1
 
 Bitex lets **Master** `Users` manage multiple `User` accounts.
 
-Learn more about **Master** `User` access in the [authentication section](/docs/authentication/)
+Learn more about **Master** `User` access in the [authentication section](/docs/authentication/welcome)
 
 A Bitex `User` is a full fledged `Account`: It has balances, can participate in [CrossBorder remittances](/docs/cross_border/welcome/),
-use the `Exchange`, and procces [Payments](/docs/payments/), among other things.
+use the `Exchange`, and procces [Payments](/docs/payments/welcome), among other things.
 
 As a full `Account`, Bitex needs to make due dilligence on every `User`, and for
 that purpose we will ask that you to complete some data required for our
