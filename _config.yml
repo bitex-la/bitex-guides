@@ -26,17 +26,9 @@ theme: minima
 plugins:
   - jekyll-feed
 
-
-# Tag Options
-tag_page_layout: tag_page
-tag_page_dir: tag
-
 permalink: /:title/ 
  
 collections:
-  testimonials:
-    output: true
-    permalink: /testimonials/:path/
   docs:
     output: true
     permalink: /docs/:path/
