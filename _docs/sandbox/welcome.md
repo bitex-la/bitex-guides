@@ -11,7 +11,7 @@ These two environments behave similarly, but they share no data.
 
 If you need to access endpoints that require authentication, you'll have to
 sign up and keep separate `ApiKeys` for each one of them.
-Learn more in the [Authentication Guide](/docs/authentication/README).
+Learn more in the [Authentication Guide](/docs/authentication/welcome).
 
 The **sandbox** uses the BTC and BCH testnets, so you can deposit testnet coins from a
 [Bitcoin Testnet Faucet](https://coinfaucet.eu/en/btc-testnet/) or a 

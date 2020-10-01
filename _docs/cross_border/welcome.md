@@ -23,7 +23,7 @@ Your `Request` and each individual `RequestOutput` go through a series of states
 before reaching their final destination, you'll also learn about all those states and what they mean.
 
 Before you can start using the **CrossBorder API** you
-will need a Bitex account with the [Master User Role](/docs/authentication) to
+will need a Bitex account with the [Master User Role](/docs/authentication/welcome) to
 create all the `Users` that will be sending and receiving the payments.
 
 If you're starting out your integration on **sandbox** feel free to contact
