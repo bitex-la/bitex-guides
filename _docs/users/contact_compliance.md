@@ -35,7 +35,7 @@ curl --location --request POST "https://sandbox.bitex.la/api/issues" \
       "relationships": {
         "issue": {
           "data": { 
-            "type": "User",
+            "type": "users",
             "id": 2
           }
         }
