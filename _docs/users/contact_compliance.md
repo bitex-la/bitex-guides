@@ -33,7 +33,7 @@ curl --location --request POST "https://sandbox.bitex.la/api/issues" \
         "reason_code": "new_client"
       },
       "relationships": {
-        "issue": {
+        "user": {
           "data": { 
             "type": "users",
             "id": 2
